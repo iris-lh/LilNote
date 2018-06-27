@@ -95,6 +95,7 @@ export default class Main extends React.Component {
     return (
       <View style={styles.container}>
         <StatusBar
+          backgroundColor={config.colors.primary}
           barStyle="light-content"
         />
         
