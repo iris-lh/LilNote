@@ -12,11 +12,12 @@ import config from '../config'
 export default class EmptyPage extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.line1}>It's awful lonely in here!</Text>
-        <Text style={styles.line2}>Why not make a lil' note?</Text>
-        <Image style={styles.arrow} source={config.icons.downArrow}/>
-      </View>
+        <View style={styles.message}>
+          <Text style={styles.line1}>It's awful lonely in here!</Text>
+          <Text style={styles.line2}>Why not make a lil' note?</Text>
+          {/* TODO get a higher resolution arrow icon */}
+          <Image style={styles.arrow} source={config.icons.downArrow}/>
+        </View>
     )
   }
 }

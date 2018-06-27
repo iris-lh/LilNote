@@ -98,6 +98,7 @@ export default class Main extends React.Component {
           barStyle="light-content"
         />
         
+        {/* TODO Extract header */}
         <View style ={styles.header}>
           <Text style={styles.headerText}> Notes </Text>
         </View>
