@@ -1,0 +1,28 @@
+{
+  "name": "lilnote",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "jest-expo": "~27.0.0",
+    "react-test-renderer": "16.3.1"
+  },
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "todo": "leasot src -x -r vscode > todo.md",
+    "test": "jest"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "expo": "^27.0.1",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "react": "16.3.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-27.0.0.tar.gz",
+    "react-native-firebase": "^4.2.0",
+    "react-native-haptic-feedback": "^1.1.7",
+    "react-navigation": "^2.5.3",
+    "uuid": "^3.2.1"
+  }
+}

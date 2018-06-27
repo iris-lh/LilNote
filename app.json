@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "LilNote",
+    "description": "This project is really great.",
+    "slug": "lilnote",
+    "privacy": "public",
+    "sdkVersion": "28.0.0",
+    "platforms": ["ios", "android"],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/store/lilnote-v1-512.png",
+    "splash": {
+      "image": "./assets/images/store/lilnote-v1-512.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#faefde"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "bundleIdentifier": "com.isaachelbling.lilnote",
+      "supportsTablet": true
+    }
+  }
+}
