@@ -25,30 +25,28 @@ export default class EmptyPage extends React.Component {
 const textStyle = {
   color: config.colors.emptyPageText,
   fontSize: 30,
-  // shadowColor: 'black',
-  // shadowOffset: {width: 5, height: 10},
-  // shadowOpacity: 0.2,
-  // shadowRadius: 10
 }
 
 const styles = StyleSheet.create({
-  container: {
-    top: Dimensions.get('window').height - (Dimensions.get('window').height / 1.5) - 20,
-    // borderWidth: 1,
+  message: {
+    height: Dimensions.get('window').height - config.textInputHeight,
+    flex: 1,
+    flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center'
   },
   line1: {
     ...textStyle,
-    // padding: 20,
-    top: -120
+    marginTop: 70,
+    flex: 1,
   },
   line2: {
     ...textStyle,
-    top: 20,
+    marginTop: 50,
+    flex: 1,
   },
   arrow: {
     tintColor: config.colors.emptyPageText,
-    top: 70,
+    marginBottom: 200,
   }
 })
