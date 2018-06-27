@@ -75,6 +75,8 @@ const styles = StyleSheet.create({
     color: 'white',
     padding: 20,
     backgroundColor: config.colors.secondary,
+
+    elevation: 7,
   },
   addContentButtonContainer: {
     flex: 1,
@@ -94,7 +96,9 @@ const styles = StyleSheet.create({
     shadowColor: 'black',
     shadowOffset: {width: 3, height: 5},
     shadowOpacity: 0.2,
-    shadowRadius: 0
+    shadowRadius: 0,
+
+    elevation: 5,
   },
   addContentIcon: {
     tintColor: 'white',
