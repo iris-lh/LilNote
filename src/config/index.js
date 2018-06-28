@@ -6,6 +6,7 @@ const _colors = {
   purple: '#8e6d9f',
   orange: '#f40',
   darkGray: '#555',
+  mediumGray: '#888',
   lightGray: '#bbb',
   brown: '#ca9'
 }
@@ -17,11 +18,15 @@ export default {
     x: require('../../assets/images/icons8-delete-96.png'),
     downArrow: require('../../assets/images/icons8-down-arrow-100.png'),
     text: require('../../assets/images/dotty/icons8-font-size-240.png'),
-    microphone: require('../../assets/images/dotty/icons8-microphone-128.png'),
+    gif: require('../../assets/images/dotty/icons8-gif-240.png'),
     video: require('../../assets/images/dotty/icons8-video-camera-128.png'),
     photo: require('../../assets/images/dotty/icons8-compact-camera-128.png'),
     draw: require('../../assets/images/dotty/icons8-crayon-240.png'),
-    gif: require('../../assets/images/dotty/icons8-gif-240.png')
+
+    signOut: require('../../assets/images/dotty/icons8-exit-128.png'),
+    paintPalette: require('../../assets/images/dotty/icons8-paint-palette-128.png'),
+    search: require('../../assets/images/dotty/icons8-search-128.png'),
+    settings: require('../../assets/images/dotty/icons8-settings-128.png')
   },
   colors: {
     ..._colors,
