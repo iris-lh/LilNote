@@ -1,5 +1,6 @@
 node_modules/**/*
 .expo/*
 npm-debug.*
+todo.auto.md
 
 android/build

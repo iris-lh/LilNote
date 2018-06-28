@@ -8,7 +8,8 @@
   },
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "todo": "leasot src -x -r vscode > todo.md",
+    "start": "yarn todo && exp start",
+    "todo": "node node_modules/leasot/bin/leasot src -x -r vscode > todo.auto.md",
     "test": "jest"
   },
   "jest": {
@@ -16,6 +17,7 @@
   },
   "dependencies": {
     "expo": "^27.0.1",
+    "leasot": "^6.3.0",
     "lodash": "^4.17.10",
     "moment": "^2.22.2",
     "react": "16.3.1",
