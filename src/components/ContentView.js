@@ -38,14 +38,17 @@ export default class ContentView extends React.Component {
 
   render() {
     return (
-      <ScrollView style={styles.scrollContainer}>
-        {this.renderNotes()}
+      <ScrollView style={styles.scrollContainer} contentContainerStyle={styles.contentContainer}>
+          {this.renderNotes()}
       </ScrollView>
     )
   }
 }
 
 const styles = StyleSheet.create({
+  contentContainer: {
+    paddingBottom: 15,
+  },
   scrollContainer: {
     flex: 1,
     marginBottom: config.textInputHeight

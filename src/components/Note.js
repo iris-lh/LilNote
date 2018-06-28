@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 0,
 
-    elevation: 10,
+    elevation: 5,
   },
   noteDate: {
     color: config.colors.grayedOut,
