@@ -2686,7 +2686,7 @@ has@^1.0.1:
   dependencies:
     function-bind "^1.1.1"
 
-hoist-non-react-statics@^2.2.0, hoist-non-react-statics@^2.3.1, hoist-non-react-statics@^2.5.0:
+hoist-non-react-statics@^2.2.0, hoist-non-react-statics@^2.2.1, hoist-non-react-statics@^2.3.1, hoist-non-react-statics@^2.5.0:
   version "2.5.5"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
 
@@ -4849,6 +4849,12 @@ react-navigation-drawer@0.4.2:
   resolved "https://registry.yarnpkg.com/react-navigation-drawer/-/react-navigation-drawer-0.4.2.tgz#49aa1bc6684923294a9c112dce75d8ec4184c64f"
   dependencies:
     react-native-drawer-layout-polyfill "^1.3.2"
+
+react-navigation-props-mapper@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/react-navigation-props-mapper/-/react-navigation-props-mapper-0.3.0.tgz#9af5dc76768039d6765995076dcbe2304f115136"
+  dependencies:
+    hoist-non-react-statics "^2.2.1"
 
 react-navigation-tabs@0.5.1:
   version "0.5.1"

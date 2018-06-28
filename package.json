@@ -25,6 +25,7 @@
     "react-native-firebase": "^4.2.0",
     "react-native-haptic-feedback": "^1.1.7",
     "react-navigation": "^2.5.3",
+    "react-navigation-props-mapper": "^0.3.0",
     "uuid": "^3.2.1"
   }
 }
