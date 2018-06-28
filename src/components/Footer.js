@@ -75,7 +75,6 @@ const styles = StyleSheet.create({
     color: 'white',
     padding: 20,
     backgroundColor: config.colors.secondary,
-
     elevation: 7,
   },
   addContentButtonContainer: {
@@ -102,7 +101,6 @@ const styles = StyleSheet.create({
   },
   addContentIcon: {
     tintColor: 'white',
-    // padding: 20,
     width: 40,
     height: 40
   }
