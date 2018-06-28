@@ -72,7 +72,7 @@ class Main extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Header/>
+        <Header title='Notes'/>
 
         <ContentView 
           noteArray={this.state.noteArray} 
