@@ -11,13 +11,12 @@ import {
 const uuid = require('uuid/v1')
 
 import Note from './Note'
-import EmptyPage from './EmptyPage'
+import Header from './Header'
+import ContentView from './ContentView'
 import Footer from './Footer'
 
 import config from '../config'
 import { firebase } from '../helpers'
-
-
 
 
 export default class Main extends React.Component {
@@ -70,43 +69,15 @@ export default class Main extends React.Component {
     this.setState({noteText: text})
   }
 
-  renderNotes() {
-    if (this.state.noteArray.length > 0) {
-      return this.state.noteArray.map((note, key) => {
-        return (
-          <Note 
-            key={note.id} 
-            id={note.id} 
-            date={note.date}
-            text={note.text}
-            deleteMethod={this.deleteNote.bind(this)}
-          />
-        )
-      })
-    } else {
-      return (
-          // TODO make the empty page scroll up with the keyboard
-          <EmptyPage/>
-      )
-    }
-  }
-
   render() {
     return (
       <View style={styles.container}>
-        <StatusBar
-          backgroundColor={config.colors.primary}
-          barStyle="light-content"
-        />
-        
-        {/* TODO Extract header */}
-        <View style ={styles.header}>
-          <Text style={styles.headerText}> Notes </Text>
-        </View>
+        <Header/>
 
-        <ScrollView style={styles.scrollContainer}>
-          {this.renderNotes()}
-        </ScrollView>
+        <ContentView 
+          noteArray={this.state.noteArray} 
+          deleteNote={this.deleteNote.bind(this)}
+        />
         
         <Footer
           onChangeText={this.updateNoteText.bind(this)}
@@ -124,46 +95,4 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: config.colors.background
   },
-  header: {
-    zIndex: 100,
-    backgroundColor: config.colors.primary,
-    alignItems: 'center',
-    justifyContent: 'center',
-    shadowColor: 'black',
-    shadowOffset: {width: 0, height: 10},
-    shadowOpacity: 0.2,
-    shadowRadius: 0,
-
-    elevation: 10,
-  },
-  headerText: {
-    color: 'white',
-    fontSize: 18,
-    padding: 26
-  },
-  scrollContainer: {
-    flex: 1,
-    marginBottom: config.textInputHeight
-  },
-  addButton: {
-    position: 'absolute',
-    zIndex: 11,
-    right: 30,
-    bottom: 90,
-    backgroundColor: config.colors.primary,
-    width: 90,
-    height: 90,
-    borderRadius: 50,
-    alignItems: 'center',
-    justifyContent: 'center',
-    elevation: 8,
-    shadowColor: 'black',
-    shadowOffset: {width: 5, height: 10},
-    shadowOpacity: 0.2,
-    shadowRadius: 0
-  },
-  addButtonText: {
-    color: 'white',
-    fontSize: 32
-  }
 });
