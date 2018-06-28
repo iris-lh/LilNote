@@ -1,5 +1,7 @@
 # Todo
 
+- Extract Footer component
+
 - Firebase authentication (probably google to start with)
 
 - Integrate react-native-navigation (much sooner rather than later)
@@ -10,7 +12,7 @@
 
 - Implement Videos
 
-- Implement gifs (giphy api?)
+- Implement gifs (GIPHY api?)
 
 - Implement doodling
 
