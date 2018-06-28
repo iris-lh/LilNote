@@ -2,8 +2,6 @@
 
 To see in-code Todos, run `yarn todo` or `npm run todo`
 
-- Extract Footer component
-
 - Firebase authentication (probably google to start with)
 
 - Integrate react-native-navigation (much sooner rather than later)
