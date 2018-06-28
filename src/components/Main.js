@@ -1,15 +1,17 @@
 import React from 'react'
 import { 
   StyleSheet, 
-  Text, 
   View, 
-  ScrollView,
-  StatusBar,
-  Vibration
-} from 'react-native';
+  Vibration,
+  Button,
+  Image
+} from 'react-native'
+import { createDrawerNavigator } from 'react-navigation'
+import { withMappedNavigationProps } from 'react-navigation-props-mapper'
 
 const uuid = require('uuid/v1')
 
+import Menu from './Menu'
 import Header from './Header'
 import ContentView from './ContentView'
 import Footer from './Footer'
@@ -17,8 +19,8 @@ import Footer from './Footer'
 import config from '../config'
 import { firebase } from '../helpers'
 
-
-export default class Main extends React.Component {
+// FIXME
+class Main extends React.Component {
  constructor() {
    super()
     this.state = {
@@ -87,6 +89,16 @@ export default class Main extends React.Component {
   }
 }
 
+export default MyApp = createDrawerNavigator({
+  Home: {
+    screen: Main,
+  },
+  Notifications: {
+    screen: Menu,
+  },
+}, {
+  contentComponent: Menu
+});
 
 const styles = StyleSheet.create({
   container: {
