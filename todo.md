@@ -15,3 +15,5 @@
 - Implement doodling
 
 - Add color picker
+
+- Implement shadows for android that better fit the visual style
