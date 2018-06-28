@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { 
   StyleSheet, 
   Text, 
@@ -10,7 +10,6 @@ import {
 
 const uuid = require('uuid/v1')
 
-import Note from './Note'
 import Header from './Header'
 import ContentView from './ContentView'
 import Footer from './Footer'
@@ -20,8 +19,8 @@ import { firebase } from '../helpers'
 
 
 export default class Main extends React.Component {
- constructor(props) {
-    super(props)
+ constructor() {
+   super()
     this.state = {
       noteArray: [
       ],
@@ -29,7 +28,7 @@ export default class Main extends React.Component {
     }
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.downloadNotes()
   }
 
@@ -38,7 +37,6 @@ export default class Main extends React.Component {
       this.setState({noteArray: notes})
     })
   }
-
 
   addNote() {
     if (this.state.noteText) {
