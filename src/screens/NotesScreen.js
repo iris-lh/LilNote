@@ -3,7 +3,6 @@ import {
   StyleSheet,
   View, 
   Vibration,
-
 } from 'react-native'
 
 const uuid = require('uuid/v1')
