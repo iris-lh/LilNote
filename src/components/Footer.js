@@ -10,7 +10,14 @@ import {
 
 import { ImagePicker, Permissions } from 'expo'
 
+import firebase from 'firebase'
+
 import config from '../config'
+
+firebase.initializeApp(config.firebase)
+
+const storage = firebase.storage()
+
 
 
 export default class Footer extends React.Component {
@@ -19,9 +26,21 @@ export default class Footer extends React.Component {
   async onPressPicture() {
     Permissions.askAsync(Permissions.CAMERA_ROLL)
     .then(res => {
-      ImagePicker.launchCameraAsync()
-      .then(res => {
-        alert(res.uri)
+      ImagePicker.launchCameraAsync({base64: true})
+      .then(async res => {
+        const storageRef = storage.ref()
+        const imagesRef = storageRef.child('images')
+        const photoRef = imagesRef.child('photo.jpg')
+        const response = await fetch(res.uri)
+        const blob = await response.blob()
+
+        photoRef.put(blob)
+        .then(snapshot => {
+          console.log('uploaded!')
+        })
+        .catch(err => {
+          console.log(err)
+        })
       })
       .catch(err => {
         console.log(err)
@@ -46,10 +65,6 @@ export default class Footer extends React.Component {
           </TouchableOpacity>
 
           {/* Take/Upload a picture */}
-          {/* <TouchableOpacity style={styles.addContentButton} onPress={()=>{this.props.navigation.navigate('Camera')}}>
-            <Image style={styles.addContentIcon} source={config.icons.photo}/>
-          </TouchableOpacity> */}
-
           <TouchableOpacity style={styles.addContentButton} onPress={this.onPressPicture}>
             <Image style={styles.addContentIcon} source={config.icons.photo}/>
           </TouchableOpacity>
