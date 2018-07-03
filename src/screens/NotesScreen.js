@@ -13,7 +13,7 @@ import ContentView from '../components/ContentView'
 import Footer from '../components/Footer'
 
 import config from '../config'
-import { firebase } from '../helpers'
+import { Database } from '../helpers'
 
 
 export default class NotesScreen extends React.Component {
@@ -31,7 +31,7 @@ export default class NotesScreen extends React.Component {
   }
 
   downloadNotes() {
-    firebase.downloadNotes(notes => {
+    Database.downloadNotes(notes => {
       this.setState({noteArray: notes})
     })
   }
@@ -45,7 +45,7 @@ export default class NotesScreen extends React.Component {
       const note = {id, date, text}
       this.setState({ noteArray: [...old, note] })
       this.setState({ noteText: '' })
-      firebase.uploadNote(note)
+      Database.addContent(note)
     }
   }
 
@@ -58,7 +58,7 @@ export default class NotesScreen extends React.Component {
     
     this.setState({noteArray: newArray})
 
-    firebase.deleteNote(id)
+    Database.deleteNote(id)
   }
 
   updateNoteText(text) {

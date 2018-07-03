@@ -4,9 +4,9 @@ To see in-code Todos, run `yarn todo` or `npm run todo`
 
 - Firebase authentication (probably google to start with)
 
-- Finish "add text" button
+- Switch database helper to using firebase module instead of raw fetch calls
 
-- Get expo camera stuff to work
+- Finish "add text" button
 
 - Implement photos
 

@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import { Camera, Permissions } from 'expo';
 
-import { firebase } from '../helpers'
+import { Database } from '../helpers'
 
 
 export default class CameraScreen extends React.Component {
@@ -63,7 +63,7 @@ export default class CameraScreen extends React.Component {
   takePicture = () => {
     this.camera.takePictureAsync({base64: true})
     .then(res => {
-      firebase.uploadPictureBase64(res.base64)
+      
     })
     .catch(err => console.log(err))
   }

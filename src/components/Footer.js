@@ -10,41 +10,28 @@ import {
 
 import { ImagePicker, Permissions } from 'expo'
 
-import firebase from 'firebase'
+const uuid = require('uuid/v1')
 
 import config from '../config'
-
-firebase.initializeApp(config.firebase)
-
-const storage = firebase.storage()
-
-
+import { Database } from '../helpers'
 
 export default class Footer extends React.Component {
-
+  async onPressText() {
+    Database.uploadContent({
+      user: 'Isaac', // auth stuff here?
+      type: 'text',
+      text: 'Hello world'
+    })
+    alert('Uploaded "Hello world"')
+  }
 
   async onPressPicture() {
-    Permissions.askAsync(Permissions.CAMERA_ROLL)
-    .then(res => {
-      ImagePicker.launchCameraAsync({base64: true})
-      .then(async res => {
-        const storageRef = storage.ref()
-        const imagesRef = storageRef.child('images')
-        const photoRef = imagesRef.child('photo.jpg')
-        const response = await fetch(res.uri)
-        const blob = await response.blob()
-
-        photoRef.put(blob)
-        .then(snapshot => {
-          console.log('uploaded!')
-        })
-        .catch(err => {
-          console.log(err)
-        })
-      })
-      .catch(err => {
-        console.log(err)
-      })
+    const permission = await Permissions.askAsync(Permissions.CAMERA_ROLL)
+    const image = await ImagePicker.launchCameraAsync()
+    Database.uploadContent({
+      user: 'Isaac', // auth stuff here?
+      type: 'image',
+      uri: image.uri
     })
   }
 
@@ -55,14 +42,14 @@ export default class Footer extends React.Component {
 
           {/* Write */}
           {/* Should focus the text input */}
-          <TouchableOpacity style={styles.addContentButton} onPress={()=>alert('Text button coming soon!')}>
+          <TouchableOpacity style={styles.addContentButton} onPress={this.onPressText}>
             <Image style={styles.addContentIcon} source={config.icons.text}/>
           </TouchableOpacity>
 
           {/* Doodle */}
-          <TouchableOpacity style={styles.addContentButton} onPress={()=>alert('Doodles coming soon!')}>
+          {/* <TouchableOpacity style={styles.addContentButton} onPress={()=>alert('Doodles coming soon!')}>
             <Image style={styles.addContentIcon} source={config.icons.draw}/>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
 
           {/* Take/Upload a picture */}
           <TouchableOpacity style={styles.addContentButton} onPress={this.onPressPicture}>
@@ -70,9 +57,9 @@ export default class Footer extends React.Component {
           </TouchableOpacity>
 
           {/* Embed a gif */}
-          <TouchableOpacity style={styles.addContentButton} onPress={()=>alert('Gifs coming soon!')}>
+          {/* <TouchableOpacity style={styles.addContentButton} onPress={()=>alert('Gifs coming soon!')}>
             <Image style={styles.addContentIcon} source={config.icons.gif}/>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
         {/* <TextInput 
           blurOnSubmit={true}
