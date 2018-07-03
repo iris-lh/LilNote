@@ -18,6 +18,10 @@ export default class Database {
         break
       case 'text':
         this._uploadText(stampedContent)
+        break
+      case 'gif':
+        this._uploadGif(stampedContent)
+        break
     }
   }
 

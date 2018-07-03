@@ -35,6 +35,15 @@ export default class Footer extends React.Component {
     })
   }
 
+  async onPressGif() {
+    Database.uploadContent({
+      user: 'Isaac', // auth stuff here?
+      type: 'gif',
+      url: 'https://i.giphy.com/media/11HkufsiNrBXK8/giphy.webp'
+    })
+    alert('Uploaded dog gif')
+  }
+
   render() {
     return (
       <KeyboardAvoidingView style={styles.footer} behavior="padding">
@@ -57,9 +66,9 @@ export default class Footer extends React.Component {
           </TouchableOpacity>
 
           {/* Embed a gif */}
-          {/* <TouchableOpacity style={styles.addContentButton} onPress={()=>alert('Gifs coming soon!')}>
+          <TouchableOpacity style={styles.addContentButton} onPress={this.onPressGif}>
             <Image style={styles.addContentIcon} source={config.icons.gif}/>
-          </TouchableOpacity> */}
+          </TouchableOpacity>
         </View>
         {/* <TextInput 
           blurOnSubmit={true}
