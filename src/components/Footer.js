@@ -8,10 +8,27 @@ import {
   KeyboardAvoidingView,
 } from 'react-native';
 
+import { ImagePicker, Permissions } from 'expo'
+
 import config from '../config'
 
 
 export default class Footer extends React.Component {
+
+
+  async onPressPicture() {
+    Permissions.askAsync(Permissions.CAMERA_ROLL)
+    .then(res => {
+      ImagePicker.launchCameraAsync()
+      .then(res => {
+        alert(res.uri)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    })
+  }
+
   render() {
     return (
       <KeyboardAvoidingView style={styles.footer} behavior="padding">
@@ -29,13 +46,12 @@ export default class Footer extends React.Component {
           </TouchableOpacity>
 
           {/* Take/Upload a picture */}
-          <TouchableOpacity style={styles.addContentButton} onPress={()=>alert('Photos coming soon!')}>
+          {/* <TouchableOpacity style={styles.addContentButton} onPress={()=>{this.props.navigation.navigate('Camera')}}>
             <Image style={styles.addContentIcon} source={config.icons.photo}/>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
 
-          {/* Record/Upload a video */}
-          <TouchableOpacity style={styles.addContentButton} onPress={()=>alert('Videos coming soon!')}>
-            <Image style={styles.addContentIcon} source={config.icons.video}/>
+          <TouchableOpacity style={styles.addContentButton} onPress={this.onPressPicture}>
+            <Image style={styles.addContentIcon} source={config.icons.photo}/>
           </TouchableOpacity>
 
           {/* Embed a gif */}
@@ -43,7 +59,7 @@ export default class Footer extends React.Component {
             <Image style={styles.addContentIcon} source={config.icons.gif}/>
           </TouchableOpacity>
         </View>
-        <TextInput 
+        {/* <TextInput 
           blurOnSubmit={true}
           keyBoardAppearance={'dark'}
           onChangeText={this.props.onChangeText}
@@ -53,7 +69,7 @@ export default class Footer extends React.Component {
           placeholderTextColor={config.colors.grayedOut}
           underlineColorAndroid='transparent'
           style={styles.textInput}>
-        </TextInput>
+        </TextInput> */}
       </KeyboardAvoidingView>
     )
   }

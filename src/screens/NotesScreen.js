@@ -1,26 +1,22 @@
 import React from 'react'
 import { 
-  StyleSheet, 
+  StyleSheet,
   View, 
   Vibration,
-  Button,
-  Image
+
 } from 'react-native'
-import { createDrawerNavigator } from 'react-navigation'
-import { withMappedNavigationProps } from 'react-navigation-props-mapper'
 
 const uuid = require('uuid/v1')
 
-import Menu from './Menu'
-import Header from './Header'
-import ContentView from './ContentView'
-import Footer from './Footer'
+import Header from '../components/Header'
+import ContentView from '../components/ContentView'
+import Footer from '../components/Footer'
 
 import config from '../config'
 import { firebase } from '../helpers'
 
-// FIXME
-class Main extends React.Component {
+
+export default class NotesScreen extends React.Component {
  constructor() {
    super()
     this.state = {
@@ -78,8 +74,9 @@ class Main extends React.Component {
           noteArray={this.state.noteArray} 
           deleteNote={this.deleteNote.bind(this)}
         />
-        
+
         <Footer
+          navigation={this.props.navigation}
           onChangeText={this.updateNoteText.bind(this)}
           onSubmitEditing={this.addNote.bind(this)}
           value={this.state.noteText}
@@ -88,17 +85,6 @@ class Main extends React.Component {
     );
   }
 }
-
-export default MyApp = createDrawerNavigator({
-  Home: {
-    screen: Main,
-  },
-  Notifications: {
-    screen: Menu,
-  },
-}, {
-  contentComponent: Menu
-});
 
 const styles = StyleSheet.create({
   container: {

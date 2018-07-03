@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "LilNote",
-    "description": "This project is really great.",
+    "description": "Why not make a lil' note?",
     "slug": "lilnote",
     "privacy": "public",
     "sdkVersion": "28.0.0",
@@ -23,6 +23,9 @@
     "ios": {
       "bundleIdentifier": "com.isaachelbling.lilnote",
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.isaachelbling.lilnote"
     }
   }
 }

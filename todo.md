@@ -4,9 +4,9 @@ To see in-code Todos, run `yarn todo` or `npm run todo`
 
 - Firebase authentication (probably google to start with)
 
-- Integrate react-native-navigation (much sooner rather than later)
-
 - Finish "add text" button
+
+- Get expo camera stuff to work
 
 - Implement photos
 

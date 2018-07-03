@@ -10,6 +10,15 @@ export default {
     .catch(err => console.log(err))
   },
 
+  uploadPictureBase64: function(base64Str) {
+    fetch(config.databaseUrl + '/images/' + 'asdf' + '.json', {
+      method: 'PUT',
+      body: JSON.stringify({base64: base64Str})
+    })
+    .then(res => console.log(res))
+    .catch(err => console.log(err))
+  },
+
   downloadNotes: function(callback) {
     fetch(config.databaseUrl + '/notes.json',)
     .then(res => res.json())
