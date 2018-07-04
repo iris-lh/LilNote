@@ -15,15 +15,20 @@ import config from '../config'
 
 
 export default class ContentView extends React.Component {
+  scrollToEnd() {
+    this.scrollView.scrollToEnd({animated: true})
+  }
+
   renderNotes() {
-    if (this.props.noteArray.length > 0) {
-      return this.props.noteArray.map((note, key) => {
+    if (this.props.entryArray.length > 0) {
+      return this.props.entryArray.map((entry, key) => {
         return (
           <Note 
-            key={note.id} 
-            id={note.id} 
-            date={note.date}
-            text={note.text}
+            key={entry.id}
+            id={entry.id}
+            date={entry.date}
+            type={entry.type}
+            content={entry.content}
             deleteMethod={this.props.deleteNote.bind(this)}
           />
         )
@@ -31,6 +36,7 @@ export default class ContentView extends React.Component {
     } else {
       return (
           // TODO make the empty page scroll up with the keyboard
+          // TODO make the empty page non-scrolling
           <EmptyPage/>
       )
     }
@@ -38,8 +44,11 @@ export default class ContentView extends React.Component {
 
   render() {
     return (
-      <ScrollView style={styles.scrollContainer} contentContainerStyle={styles.contentContainer}>
-          {this.renderNotes()}
+      <ScrollView
+        ref={ref => this.scrollView = ref}
+        style={styles.scrollContainer} 
+        contentContainerStyle={styles.contentContainer}>
+        {this.renderNotes()}
       </ScrollView>
     )
   }
@@ -47,10 +56,10 @@ export default class ContentView extends React.Component {
 
 const styles = StyleSheet.create({
   contentContainer: {
-    paddingBottom: 15,
+    paddingBottom: 70,
   },
   scrollContainer: {
     flex: 1,
-    marginBottom: config.textInputHeight
+    // marginBottom: config.textInputHeight
   },
 })

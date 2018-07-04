@@ -8,41 +8,9 @@ import {
   KeyboardAvoidingView,
 } from 'react-native';
 
-import { ImagePicker, Permissions } from 'expo'
-
-const uuid = require('uuid/v1')
-
 import config from '../config'
-import { Database } from '../helpers'
 
 export default class Footer extends React.Component {
-  async onPressText() {
-    Database.uploadContent({
-      user: 'Isaac', // auth stuff here?
-      type: 'text',
-      text: 'Hello world'
-    })
-    alert('Uploaded "Hello world"')
-  }
-
-  async onPressPicture() {
-    const permission = await Permissions.askAsync(Permissions.CAMERA_ROLL)
-    const image = await ImagePicker.launchCameraAsync()
-    Database.uploadContent({
-      user: 'Isaac', // auth stuff here?
-      type: 'image',
-      uri: image.uri
-    })
-  }
-
-  async onPressGif() {
-    Database.uploadContent({
-      user: 'Isaac', // auth stuff here?
-      type: 'gif',
-      url: 'https://i.giphy.com/media/11HkufsiNrBXK8/giphy.webp'
-    })
-    alert('Uploaded dog gif')
-  }
 
   render() {
     return (
@@ -51,7 +19,7 @@ export default class Footer extends React.Component {
 
           {/* Write */}
           {/* Should focus the text input */}
-          <TouchableOpacity style={styles.addContentButton} onPress={this.onPressText}>
+          <TouchableOpacity style={styles.addContentButton} onPress={this.props.onPressText}>
             <Image style={styles.addContentIcon} source={config.icons.text}/>
           </TouchableOpacity>
 
@@ -61,12 +29,12 @@ export default class Footer extends React.Component {
           </TouchableOpacity> */}
 
           {/* Take/Upload a picture */}
-          <TouchableOpacity style={styles.addContentButton} onPress={this.onPressPicture}>
+          <TouchableOpacity style={styles.addContentButton} onPress={this.props.onPressPicture}>
             <Image style={styles.addContentIcon} source={config.icons.photo}/>
           </TouchableOpacity>
 
           {/* Embed a gif */}
-          <TouchableOpacity style={styles.addContentButton} onPress={this.onPressGif}>
+          <TouchableOpacity style={styles.addContentButton} onPress={this.props.onPressGif}>
             <Image style={styles.addContentIcon} source={config.icons.gif}/>
           </TouchableOpacity>
         </View>

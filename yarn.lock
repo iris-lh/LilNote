@@ -2891,6 +2891,10 @@ ignore-walk@^3.0.1:
   dependencies:
     minimatch "^3.0.4"
 
+ignore-warnings@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/ignore-warnings/-/ignore-warnings-0.1.0.tgz#0ce90ed2f745aef3254529daa0c4175dc01d076d"
+
 ignore@^3.3.5:
   version "3.3.10"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.10.tgz#0a97fb876986e8081c631160f8f9f389157f0043"
@@ -4830,6 +4834,12 @@ react-native-gesture-handler@1.0.4:
     hoist-non-react-statics "^2.3.1"
     invariant "^2.2.2"
     prop-types "^15.5.10"
+
+react-native-ignore-warnings@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/react-native-ignore-warnings/-/react-native-ignore-warnings-0.1.1.tgz#3b6fb09d0e8f7917606fe8e18c6b1e28fafa044e"
+  dependencies:
+    ignore-warnings "0.1.0"
 
 react-native-maps@0.21.0:
   version "0.21.0"

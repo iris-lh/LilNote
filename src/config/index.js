@@ -12,6 +12,7 @@ const _colors = {
 }
 
 export default {
+  user: 'Isaac',
   firebase: {
     databaseURL: 'https://lilnote-965c1.firebaseio.com',
     apiKey: 'AIzaSyAGBhj-Mwu_qV4AK_zTTXSfCsQtzZfop50',
