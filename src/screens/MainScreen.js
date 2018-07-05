@@ -5,7 +5,7 @@ import {
   Vibration,
 } from 'react-native'
 
-import { ImagePicker, ImageManipulator, Permissions } from 'expo'
+import Expo, { ImagePicker, ImageManipulator, Permissions } from 'expo'
 
 const _ = require('lodash')
 
@@ -21,8 +21,9 @@ import { Cloud } from '../helpers'
 
 export default class MainScreen extends React.Component {
  constructor() {
-   super()
+    super()
     this.state = {
+      user: {},
       entryArray: [
       ],
       inputMode: '',
@@ -31,12 +32,16 @@ export default class MainScreen extends React.Component {
     }
   }
 
-  componentWillMount() {
-    this.getEntries()
+  componentWillMount = () => {
+    Cloud.signInGoogle(user => {
+      this.setState({user: user})
+      this.getEntries()
+    })
   }
 
+
   getEntries() {
-    return Cloud.getEntries(config.user, entries => {
+    return Cloud.getEntries(this.state.user.uid, entries => {
       this.setState({entryArray: entries})
       this.forceUpdate()
     })
@@ -47,8 +52,7 @@ export default class MainScreen extends React.Component {
   }
 
   async onSubmitTextEntry() {
-    Cloud.uploadContent({
-      user: config.user, // auth stuff here?
+    Cloud.uploadContent(this.state.user.uid, {
       type: 'text',
       text: this.state.textEntryValue
     })
@@ -67,8 +71,7 @@ export default class MainScreen extends React.Component {
     const permission = await Permissions.askAsync(Permissions.CAMERA_ROLL)
     const image = await ImagePicker.launchCameraAsync()
     const processed = await ImageManipulator.manipulate(image.uri, [{resize: {width: 300}}])
-    Cloud.uploadContent({
-      user: config.user, // auth stuff here?
+    Cloud.uploadContent(this.state.user.uid, {
       type: 'image',
       uri: processed.uri
     })
@@ -83,8 +86,7 @@ export default class MainScreen extends React.Component {
   }
 
   async onSelectGif(url) {
-    Cloud.uploadContent({
-      user: config.user, // auth stuff here?
+    Cloud.uploadContent(this.state.user.uid, {
       type: 'gif',
       url: url
     })
@@ -116,7 +118,7 @@ export default class MainScreen extends React.Component {
       return entry.id !== id
     })
     
-    Cloud.deleteEntry(config.user, id)
+    Cloud.deleteEntry(this.state.user.uid, id)
     .then(res => {
       this.getEntries()
     })
@@ -143,8 +145,7 @@ export default class MainScreen extends React.Component {
   };
 
   onSubmitDoodle = async (uri) => {
-    Cloud.uploadContent({
-      user: config.user, // auth stuff here?
+    Cloud.uploadContent(this.state.user.uid, {
       type: 'image',
       uri: uri
     })

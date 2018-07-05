@@ -13,6 +13,11 @@ const _colors = {
 
 export default {
   user: 'Isaac',
+  auth: {
+    google: {
+      androidClientId: '51705587624-st2fknhn6avhecdv9fg8iacm7baaa2h8.apps.googleusercontent.com'
+    }
+  },
   giphy: {
     apiKey: 'CWT9HXykv90uJUan8LW1gini2XLzLLuH'
   },
@@ -21,7 +26,6 @@ export default {
     apiKey: 'AIzaSyAGBhj-Mwu_qV4AK_zTTXSfCsQtzZfop50',
     storageBucket: 'lilnote-965c1.appspot.com',
   },
-  databaseUrl: 'https://lilnote-965c1.firebaseio.com',
   textInputHeight: 60,
   icons: {
     x: require('../../assets/images/icons8-delete-96.png'),
