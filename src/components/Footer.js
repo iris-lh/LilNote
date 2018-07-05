@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 
 import GifScroller from './GifScroller'
+import Doodle from './Doodle'
 
 import config from '../config'
 
@@ -53,6 +54,14 @@ export default class Footer extends React.Component {
           </TextInput>
         </View>
       )
+    } else if (this.props.inputMode === 'doodle') {
+      return (
+        <Doodle
+          style={styles.doodle}
+          ref={ref => this.doodle = ref}
+          updateInputMode={this.props.updateInputMode}
+          onSubmitDoodle={this.props.onSubmitDoodle}/>
+      )
     } else {
       return this.renderButtons()
     }
@@ -72,6 +81,14 @@ export default class Footer extends React.Component {
     this.props.updateInputMode('gif')
   }
 
+  onPressDoodle = () => {
+    this.props.updateInputMode('doodle')
+  }
+
+  onChangeDoodle = (dimensions) => {
+    this.props.onChangeDoodle(this.sketch, dimensions)
+  }
+
   renderButtons = () => {
     return (
       <View style={styles.addContentButtonContainer}>
@@ -82,9 +99,9 @@ export default class Footer extends React.Component {
         </TouchableOpacity>
 
         {/* Doodle */}
-        {/* <TouchableOpacity style={styles.addContentButton} onPress={()=>alert('Doodles coming soon!')}>
+        <TouchableOpacity style={styles.addContentButton} onPress={this.onPressDoodle}>
           <Image style={styles.addContentIcon} source={config.icons.draw}/>
-        </TouchableOpacity> */}
+        </TouchableOpacity>
 
         {/* Take/Upload a picture */}
         <TouchableOpacity style={styles.addContentButton} onPress={this.props.onPressPicture}>

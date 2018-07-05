@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "expo": "^28.0.1",
+    "expo-pixi": "^0.2.4",
     "firebase": "^5.2.0",
     "leasot": "^6.3.0",
     "lodash": "^4.17.10",

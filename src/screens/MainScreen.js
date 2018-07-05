@@ -60,7 +60,7 @@ export default class MainScreen extends React.Component {
         this.scrollToEnd()
       }, 100)
     })
-    this.setState({ textEntryValue: '' })
+    this.updateTextEntryValue('')
   }
 
   async onPressPicture() {
@@ -99,12 +99,12 @@ export default class MainScreen extends React.Component {
   }
 
   onBlurTextEntryInput = () => {
-    this.setState({inputMode: ''})
+    this.updateInputMode('')
   }
 
   onBlurGifSearchInput = () => {
-    this.setState({inputMode: ''}) 
-    this.setState({gifSearchValue: ''})
+    this.updateInputMode('')
+    this.updateGifSearchValue('')
   }
 
   deleteEntry(id) {
@@ -130,6 +130,35 @@ export default class MainScreen extends React.Component {
     this.setState({gifSearchValue: text})
   }
 
+  onChangeDoodle = async (sketch, dimensions) => {
+    const options = {
+      format: 'png', /// PNG because the view has a clear background
+      quality: 0.1, /// Low quality works because it's just a line
+      result: 'file',
+      height: 300,
+      width: 300
+    };
+    /// Using 'Expo.takeSnapShotAsync', and our view 'this.sketch' we can get a uri of the image
+    const uri = await Expo.takeSnapshotAsync(sketch, options);
+  };
+
+  onSubmitDoodle = async (uri) => {
+    Database.uploadContent({
+      user: config.user, // auth stuff here?
+      type: 'image',
+      uri: uri
+    })
+    .then(res => {
+      this.updateInputMode('')
+      this.getEntries()
+    })
+    .then(res => {
+      setTimeout(()=>{
+        this.scrollToEnd()
+      }, 100)
+    })
+  }
+
   scrollToEnd() {
     this.contentView.scrollToEnd()
   }
@@ -153,8 +182,10 @@ export default class MainScreen extends React.Component {
           gifSearchValue={this.state.gifSearchValue}
           onChangeTextEntryValue={this.updateTextEntryValue.bind(this)}
           onChangeGifSearchValue={this.updateGifSearchValue.bind(this)}
+          onChangeDoodle={this.onChangeDoodle.bind(this)}
           onSubmitTextEntry={this.onSubmitTextEntry.bind(this)}
           onSelectGif={this.onSelectGif.bind(this)}
+          onSubmitDoodle={this.onSubmitDoodle.bind(this)}
           onBlurTextEntryInput={this.onBlurTextEntryInput.bind(this)}
           onBlurGifSearchInput={this.onBlurGifSearchInput.bind(this)}
           onPressPicture={this.onPressPicture.bind(this)}

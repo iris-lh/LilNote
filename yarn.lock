@@ -434,6 +434,22 @@
     lodash "^4.17.5"
     to-fast-properties "^2.0.0"
 
+"@expo/browser-polyfill@^0.0.0-alpha.3":
+  version "0.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/@expo/browser-polyfill/-/browser-polyfill-0.0.0-alpha.9.tgz#f11c7ba92e498e9cf715afe29a788ffb1b0ad698"
+  dependencies:
+    adaptive-bezier-curve "1.0.3"
+    adaptive-quadratic-curve "1.0.2"
+    color-parser "0.1.0"
+    earcut "2.1.3"
+    extrude-polyline "1.0.6"
+    fbemitter "^2.1.1"
+    gl-matrix "2.6.1"
+    react-native-console-time-polyfill "^0.0.6"
+    string-format "2.0.0"
+    text-encoding "^0.6.4"
+    xmldom-qsa "^1.0.3"
+
 "@expo/vector-icons@^6.3.1":
   version "6.3.1"
   resolved "https://registry.yarnpkg.com/@expo/vector-icons/-/vector-icons-6.3.1.tgz#ffb97cc2343e4a330b44ce3063ee7c8571a6a50d"
@@ -572,6 +588,138 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.0.tgz#50c1e2260ac0ed9439a181de3725a0168d59c48a"
 
+"@pixi/filter-adjustment@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-adjustment/-/filter-adjustment-2.5.0.tgz#541ae6f60fe74c43cd6d74b78347d97da4a1c20a"
+
+"@pixi/filter-advanced-bloom@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-advanced-bloom/-/filter-advanced-bloom-2.6.0.tgz#5de110c97a9a61c27d67daf0d6741124445275fb"
+  dependencies:
+    "@pixi/filter-kawase-blur" "^2.6.0"
+
+"@pixi/filter-ascii@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-ascii/-/filter-ascii-2.5.0.tgz#62ef324c68412584e6e529a83c376c2855fbaf67"
+
+"@pixi/filter-bevel@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-bevel/-/filter-bevel-2.6.0.tgz#f45bb12f25fd61defedfc222bee15ba03a32e8e4"
+
+"@pixi/filter-bloom@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-bloom/-/filter-bloom-2.5.0.tgz#4a42059c30beefa483c0dec7ef3614b2b3c58c05"
+
+"@pixi/filter-bulge-pinch@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-bulge-pinch/-/filter-bulge-pinch-2.6.0.tgz#1e27c866da08b3b9743149fb8b3464b49c05f138"
+
+"@pixi/filter-color-map@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-color-map/-/filter-color-map-2.6.0.tgz#0fe8944dd275b38c38f9da5a13ccf1af2aa80996"
+
+"@pixi/filter-color-replace@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-color-replace/-/filter-color-replace-2.6.0.tgz#7ede850e89b61913ec00d7162370949a34fccf7f"
+
+"@pixi/filter-convolution@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-convolution/-/filter-convolution-2.6.0.tgz#ce0cc499ae132e4fbac8aa5074489cc76a097120"
+
+"@pixi/filter-cross-hatch@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-cross-hatch/-/filter-cross-hatch-2.5.0.tgz#d72e9d3eb44aea64e629fb8718219679ec67d017"
+
+"@pixi/filter-crt@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-crt/-/filter-crt-2.6.0.tgz#0ab5c46a5ec20a20f9ca4c49af37520ae4e03204"
+
+"@pixi/filter-dot@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-dot/-/filter-dot-2.5.0.tgz#25dad184662eb537a18ca38ecf003d97dd999d75"
+
+"@pixi/filter-drop-shadow@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-drop-shadow/-/filter-drop-shadow-2.6.0.tgz#5d3c3f587647415f5c005e52c3e131adccf280f9"
+  dependencies:
+    "@pixi/filter-kawase-blur" "^2.6.0"
+
+"@pixi/filter-emboss@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-emboss/-/filter-emboss-2.5.0.tgz#3d97cc4fb5991d7699ffe4a78216df8c2e353079"
+
+"@pixi/filter-glitch@^2.6.1":
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-glitch/-/filter-glitch-2.6.1.tgz#8fece6cd68a5720d0abe74bb1b90592c0e4a8bac"
+
+"@pixi/filter-glow@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-glow/-/filter-glow-2.5.0.tgz#44bd462ccbfebe2b7932291dddbee7ce14cb62c0"
+
+"@pixi/filter-godray@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-godray/-/filter-godray-2.6.0.tgz#7c9fd85d2949740f555d1b817fa7f5fc71952f1c"
+
+"@pixi/filter-kawase-blur@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-kawase-blur/-/filter-kawase-blur-2.6.0.tgz#d45c34d9cf3a0a6d9e73ba8266b5ef8f41fcd652"
+
+"@pixi/filter-motion-blur@^2.6.1":
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-motion-blur/-/filter-motion-blur-2.6.1.tgz#047c9999afb5838a7fa4f923f9237f9eeda284e8"
+
+"@pixi/filter-multi-color-replace@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-multi-color-replace/-/filter-multi-color-replace-2.5.0.tgz#30834ddfc984cec7453034ea51217a391b96cf60"
+
+"@pixi/filter-old-film@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-old-film/-/filter-old-film-2.6.0.tgz#38ae6ed48288cd6b0085a8476c8da2ff4a4069c9"
+
+"@pixi/filter-outline@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-outline/-/filter-outline-2.6.0.tgz#a8d1503db17bcb5830cc1f6b424ca78007eb841f"
+
+"@pixi/filter-pixelate@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-pixelate/-/filter-pixelate-2.5.0.tgz#07aeb3f00a48d9c4a7cb228860d6322d77db4bc3"
+
+"@pixi/filter-radial-blur@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-radial-blur/-/filter-radial-blur-2.6.0.tgz#fd2d5214786303f9f4f23b04079736e618e02d7c"
+
+"@pixi/filter-reflection@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-reflection/-/filter-reflection-2.6.0.tgz#7496cb51a0e61bf7bc158fa8e61d45319da8cc7f"
+
+"@pixi/filter-rgb-split@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-rgb-split/-/filter-rgb-split-2.5.0.tgz#493704fa8d061a70772b6a38f60dff6b1c27b554"
+
+"@pixi/filter-shockwave@^2.6.1":
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-shockwave/-/filter-shockwave-2.6.1.tgz#1894d0c3b0188fb2a846ef995b3c2f5b043cfaab"
+
+"@pixi/filter-simple-lightmap@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-simple-lightmap/-/filter-simple-lightmap-2.6.0.tgz#f2045101071d9d177fd45f61708f87bff0191496"
+
+"@pixi/filter-tilt-shift@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-tilt-shift/-/filter-tilt-shift-2.6.0.tgz#3bcca3bf4ef3c5c6182d9f56035da547cddef7f9"
+
+"@pixi/filter-twist@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-twist/-/filter-twist-2.5.0.tgz#a8f16567e9bc2f1d3026a6ebc3167e24221e3f28"
+
+"@pixi/filter-zoom-blur@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-zoom-blur/-/filter-zoom-blur-2.6.0.tgz#4ad966a309372b731e0fc469d97dd51bf79d1bd6"
+
+"@types/pixi.js@^4.5.3":
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/@types/pixi.js/-/pixi.js-4.8.0.tgz#961056751780046fe5da2166669a0f1e964a7b92"
+
 abab@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
@@ -600,6 +748,14 @@ acorn-globals@^4.1.0:
 acorn@^5.0.0, acorn@^5.3.0:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.1.tgz#f095829297706a7c9776958c0afc8930a9b9d9d8"
+
+adaptive-bezier-curve@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/adaptive-bezier-curve/-/adaptive-bezier-curve-1.0.3.tgz#477577abe87d7280d46ca41649f6c22646fe8227"
+
+adaptive-quadratic-curve@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/adaptive-quadratic-curve/-/adaptive-quadratic-curve-1.0.2.tgz#65b4190fc5711698d24f0ae7bd5fea6cda90010d"
 
 ajv@^5.1.0:
   version "5.5.2"
@@ -789,6 +945,10 @@ art@^0.10.0:
   version "0.10.2"
   resolved "https://registry.yarnpkg.com/art/-/art-0.10.2.tgz#55c3738d82a3a07e0623943f070ebe86297253d9"
 
+as-number@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/as-number/-/as-number-1.0.0.tgz#acb27e34f8f9d8ab0da9e376f3b8959860f80a66"
+
 asap@~2.0.3:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
@@ -891,6 +1051,14 @@ babel-generator@^6.18.0, babel-generator@^6.26.0:
     source-map "^0.5.7"
     trim-right "^1.0.1"
 
+babel-helper-bindify-decorators@^6.24.1:
+  version "6.24.1"
+  resolved "https://registry.yarnpkg.com/babel-helper-bindify-decorators/-/babel-helper-bindify-decorators-6.24.1.tgz#14c19e5f142d7b47f19a52431e52b1ccbc40a330"
+  dependencies:
+    babel-runtime "^6.22.0"
+    babel-traverse "^6.24.1"
+    babel-types "^6.24.1"
+
 babel-helper-builder-binary-assignment-operator-visitor@^6.24.1:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-helper-builder-binary-assignment-operator-visitor/-/babel-helper-builder-binary-assignment-operator-visitor-6.24.1.tgz#cce4517ada356f4220bcae8a02c2b346f9a56664"
@@ -929,6 +1097,15 @@ babel-helper-explode-assignable-expression@^6.24.1:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-helper-explode-assignable-expression/-/babel-helper-explode-assignable-expression-6.24.1.tgz#f25b82cf7dc10433c55f70592d5746400ac22caa"
   dependencies:
+    babel-runtime "^6.22.0"
+    babel-traverse "^6.24.1"
+    babel-types "^6.24.1"
+
+babel-helper-explode-class@^6.24.1:
+  version "6.24.1"
+  resolved "https://registry.yarnpkg.com/babel-helper-explode-class/-/babel-helper-explode-class-6.24.1.tgz#7dc2a3910dee007056e1e31d640ced3d54eaa9eb"
+  dependencies:
+    babel-helper-bindify-decorators "^6.24.1"
     babel-runtime "^6.22.0"
     babel-traverse "^6.24.1"
     babel-types "^6.24.1"
@@ -972,7 +1149,7 @@ babel-helper-regex@^6.24.1:
     babel-types "^6.26.0"
     lodash "^4.17.4"
 
-babel-helper-remap-async-to-generator@^6.16.0:
+babel-helper-remap-async-to-generator@^6.16.0, babel-helper-remap-async-to-generator@^6.24.1:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-helper-remap-async-to-generator/-/babel-helper-remap-async-to-generator-6.24.1.tgz#5ec581827ad723fecdd381f1c928390676e4551b"
   dependencies:
@@ -1013,7 +1190,7 @@ babel-messages@^6.23.0:
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-check-es2015-constants@^6.5.0, babel-plugin-check-es2015-constants@^6.8.0:
+babel-plugin-check-es2015-constants@^6.22.0, babel-plugin-check-es2015-constants@^6.5.0, babel-plugin-check-es2015-constants@^6.8.0:
   version "6.22.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-check-es2015-constants/-/babel-plugin-check-es2015-constants-6.22.0.tgz#35157b101426fd2ffd3da3f75c7d1e91835bbf8a"
   dependencies:
@@ -1062,11 +1239,15 @@ babel-plugin-syntax-async-functions@^6.5.0, babel-plugin-syntax-async-functions@
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-async-functions/-/babel-plugin-syntax-async-functions-6.13.0.tgz#cad9cad1191b5ad634bf30ae0872391e0647be95"
 
+babel-plugin-syntax-async-generators@^6.5.0:
+  version "6.13.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-syntax-async-generators/-/babel-plugin-syntax-async-generators-6.13.0.tgz#6bc963ebb16eccbae6b92b596eb7f35c342a8b9a"
+
 babel-plugin-syntax-class-properties@^6.5.0, babel-plugin-syntax-class-properties@^6.8.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-class-properties/-/babel-plugin-syntax-class-properties-6.13.0.tgz#d7eb23b79a317f8543962c505b827c7d6cac27de"
 
-babel-plugin-syntax-decorators@^6.1.18:
+babel-plugin-syntax-decorators@^6.1.18, babel-plugin-syntax-decorators@^6.13.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-decorators/-/babel-plugin-syntax-decorators-6.13.0.tgz#312563b4dbde3cc806cee3e416cceeaddd11ac0b"
 
@@ -1094,9 +1275,17 @@ babel-plugin-syntax-object-rest-spread@^6.13.0, babel-plugin-syntax-object-rest-
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-object-rest-spread/-/babel-plugin-syntax-object-rest-spread-6.13.0.tgz#fd6536f2bce13836ffa3a5458c4903a597bb3bf5"
 
-babel-plugin-syntax-trailing-function-commas@^6.20.0, babel-plugin-syntax-trailing-function-commas@^6.5.0, babel-plugin-syntax-trailing-function-commas@^6.8.0:
+babel-plugin-syntax-trailing-function-commas@^6.20.0, babel-plugin-syntax-trailing-function-commas@^6.22.0, babel-plugin-syntax-trailing-function-commas@^6.5.0, babel-plugin-syntax-trailing-function-commas@^6.8.0:
   version "6.22.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-trailing-function-commas/-/babel-plugin-syntax-trailing-function-commas-6.22.0.tgz#ba0360937f8d06e40180a43fe0d5616fff532cf3"
+
+babel-plugin-transform-async-generator-functions@^6.24.1:
+  version "6.24.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-async-generator-functions/-/babel-plugin-transform-async-generator-functions-6.24.1.tgz#f058900145fd3e9907a6ddf28da59f215258a5db"
+  dependencies:
+    babel-helper-remap-async-to-generator "^6.24.1"
+    babel-plugin-syntax-async-generators "^6.5.0"
+    babel-runtime "^6.22.0"
 
 babel-plugin-transform-async-to-generator@6.16.0:
   version "6.16.0"
@@ -1106,7 +1295,15 @@ babel-plugin-transform-async-to-generator@6.16.0:
     babel-plugin-syntax-async-functions "^6.8.0"
     babel-runtime "^6.0.0"
 
-babel-plugin-transform-class-properties@^6.18.0, babel-plugin-transform-class-properties@^6.5.0, babel-plugin-transform-class-properties@^6.8.0:
+babel-plugin-transform-async-to-generator@^6.24.1:
+  version "6.24.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-async-to-generator/-/babel-plugin-transform-async-to-generator-6.24.1.tgz#6536e378aff6cb1d5517ac0e40eb3e9fc8d08761"
+  dependencies:
+    babel-helper-remap-async-to-generator "^6.24.1"
+    babel-plugin-syntax-async-functions "^6.8.0"
+    babel-runtime "^6.22.0"
+
+babel-plugin-transform-class-properties@^6.18.0, babel-plugin-transform-class-properties@^6.24.1, babel-plugin-transform-class-properties@^6.5.0, babel-plugin-transform-class-properties@^6.8.0:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-class-properties/-/babel-plugin-transform-class-properties-6.24.1.tgz#6a79763ea61d33d36f37b611aa9def81a81b46ac"
   dependencies:
@@ -1123,19 +1320,29 @@ babel-plugin-transform-decorators-legacy@^1.3.4:
     babel-runtime "^6.2.0"
     babel-template "^6.3.0"
 
-babel-plugin-transform-es2015-arrow-functions@^6.5.0, babel-plugin-transform-es2015-arrow-functions@^6.8.0:
+babel-plugin-transform-decorators@^6.24.1:
+  version "6.24.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-decorators/-/babel-plugin-transform-decorators-6.24.1.tgz#788013d8f8c6b5222bdf7b344390dfd77569e24d"
+  dependencies:
+    babel-helper-explode-class "^6.24.1"
+    babel-plugin-syntax-decorators "^6.13.0"
+    babel-runtime "^6.22.0"
+    babel-template "^6.24.1"
+    babel-types "^6.24.1"
+
+babel-plugin-transform-es2015-arrow-functions@^6.22.0, babel-plugin-transform-es2015-arrow-functions@^6.5.0, babel-plugin-transform-es2015-arrow-functions@^6.8.0:
   version "6.22.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-arrow-functions/-/babel-plugin-transform-es2015-arrow-functions-6.22.0.tgz#452692cb711d5f79dc7f85e440ce41b9f244d221"
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-transform-es2015-block-scoped-functions@^6.8.0:
+babel-plugin-transform-es2015-block-scoped-functions@^6.22.0, babel-plugin-transform-es2015-block-scoped-functions@^6.8.0:
   version "6.22.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-block-scoped-functions/-/babel-plugin-transform-es2015-block-scoped-functions-6.22.0.tgz#bbc51b49f964d70cb8d8e0b94e820246ce3a6141"
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-transform-es2015-block-scoping@^6.5.0, babel-plugin-transform-es2015-block-scoping@^6.8.0:
+babel-plugin-transform-es2015-block-scoping@^6.24.1, babel-plugin-transform-es2015-block-scoping@^6.5.0, babel-plugin-transform-es2015-block-scoping@^6.8.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-block-scoping/-/babel-plugin-transform-es2015-block-scoping-6.26.0.tgz#d70f5299c1308d05c12f463813b0a09e73b1895f"
   dependencies:
@@ -1145,7 +1352,7 @@ babel-plugin-transform-es2015-block-scoping@^6.5.0, babel-plugin-transform-es201
     babel-types "^6.26.0"
     lodash "^4.17.4"
 
-babel-plugin-transform-es2015-classes@^6.5.0, babel-plugin-transform-es2015-classes@^6.8.0:
+babel-plugin-transform-es2015-classes@^6.24.1, babel-plugin-transform-es2015-classes@^6.5.0, babel-plugin-transform-es2015-classes@^6.8.0:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-classes/-/babel-plugin-transform-es2015-classes-6.24.1.tgz#5a4c58a50c9c9461e564b4b2a3bfabc97a2584db"
   dependencies:
@@ -1159,26 +1366,33 @@ babel-plugin-transform-es2015-classes@^6.5.0, babel-plugin-transform-es2015-clas
     babel-traverse "^6.24.1"
     babel-types "^6.24.1"
 
-babel-plugin-transform-es2015-computed-properties@^6.5.0, babel-plugin-transform-es2015-computed-properties@^6.8.0:
+babel-plugin-transform-es2015-computed-properties@^6.24.1, babel-plugin-transform-es2015-computed-properties@^6.5.0, babel-plugin-transform-es2015-computed-properties@^6.8.0:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-computed-properties/-/babel-plugin-transform-es2015-computed-properties-6.24.1.tgz#6fe2a8d16895d5634f4cd999b6d3480a308159b3"
   dependencies:
     babel-runtime "^6.22.0"
     babel-template "^6.24.1"
 
-babel-plugin-transform-es2015-destructuring@6.x, babel-plugin-transform-es2015-destructuring@^6.5.0, babel-plugin-transform-es2015-destructuring@^6.8.0:
+babel-plugin-transform-es2015-destructuring@6.x, babel-plugin-transform-es2015-destructuring@^6.22.0, babel-plugin-transform-es2015-destructuring@^6.5.0, babel-plugin-transform-es2015-destructuring@^6.8.0:
   version "6.23.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-destructuring/-/babel-plugin-transform-es2015-destructuring-6.23.0.tgz#997bb1f1ab967f682d2b0876fe358d60e765c56d"
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-transform-es2015-for-of@^6.5.0, babel-plugin-transform-es2015-for-of@^6.8.0:
+babel-plugin-transform-es2015-duplicate-keys@^6.24.1:
+  version "6.24.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-duplicate-keys/-/babel-plugin-transform-es2015-duplicate-keys-6.24.1.tgz#73eb3d310ca969e3ef9ec91c53741a6f1576423e"
+  dependencies:
+    babel-runtime "^6.22.0"
+    babel-types "^6.24.1"
+
+babel-plugin-transform-es2015-for-of@^6.22.0, babel-plugin-transform-es2015-for-of@^6.5.0, babel-plugin-transform-es2015-for-of@^6.8.0:
   version "6.23.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-for-of/-/babel-plugin-transform-es2015-for-of-6.23.0.tgz#f47c95b2b613df1d3ecc2fdb7573623c75248691"
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-transform-es2015-function-name@6.x, babel-plugin-transform-es2015-function-name@^6.5.0, babel-plugin-transform-es2015-function-name@^6.8.0:
+babel-plugin-transform-es2015-function-name@6.x, babel-plugin-transform-es2015-function-name@^6.24.1, babel-plugin-transform-es2015-function-name@^6.5.0, babel-plugin-transform-es2015-function-name@^6.8.0:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-function-name/-/babel-plugin-transform-es2015-function-name-6.24.1.tgz#834c89853bc36b1af0f3a4c5dbaa94fd8eacaa8b"
   dependencies:
@@ -1186,13 +1400,21 @@ babel-plugin-transform-es2015-function-name@6.x, babel-plugin-transform-es2015-f
     babel-runtime "^6.22.0"
     babel-types "^6.24.1"
 
-babel-plugin-transform-es2015-literals@^6.5.0, babel-plugin-transform-es2015-literals@^6.8.0:
+babel-plugin-transform-es2015-literals@^6.22.0, babel-plugin-transform-es2015-literals@^6.5.0, babel-plugin-transform-es2015-literals@^6.8.0:
   version "6.22.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-literals/-/babel-plugin-transform-es2015-literals-6.22.0.tgz#4f54a02d6cd66cf915280019a31d31925377ca2e"
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-transform-es2015-modules-commonjs@6.x, babel-plugin-transform-es2015-modules-commonjs@^6.5.0, babel-plugin-transform-es2015-modules-commonjs@^6.8.0:
+babel-plugin-transform-es2015-modules-amd@^6.24.1:
+  version "6.24.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-modules-amd/-/babel-plugin-transform-es2015-modules-amd-6.24.1.tgz#3b3e54017239842d6d19c3011c4bd2f00a00d154"
+  dependencies:
+    babel-plugin-transform-es2015-modules-commonjs "^6.24.1"
+    babel-runtime "^6.22.0"
+    babel-template "^6.24.1"
+
+babel-plugin-transform-es2015-modules-commonjs@6.x, babel-plugin-transform-es2015-modules-commonjs@^6.24.1, babel-plugin-transform-es2015-modules-commonjs@^6.5.0, babel-plugin-transform-es2015-modules-commonjs@^6.8.0:
   version "6.26.2"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-modules-commonjs/-/babel-plugin-transform-es2015-modules-commonjs-6.26.2.tgz#58a793863a9e7ca870bdc5a881117ffac27db6f3"
   dependencies:
@@ -1201,14 +1423,30 @@ babel-plugin-transform-es2015-modules-commonjs@6.x, babel-plugin-transform-es201
     babel-template "^6.26.0"
     babel-types "^6.26.0"
 
-babel-plugin-transform-es2015-object-super@^6.8.0:
+babel-plugin-transform-es2015-modules-systemjs@^6.24.1:
+  version "6.24.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-modules-systemjs/-/babel-plugin-transform-es2015-modules-systemjs-6.24.1.tgz#ff89a142b9119a906195f5f106ecf305d9407d23"
+  dependencies:
+    babel-helper-hoist-variables "^6.24.1"
+    babel-runtime "^6.22.0"
+    babel-template "^6.24.1"
+
+babel-plugin-transform-es2015-modules-umd@^6.24.1:
+  version "6.24.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-modules-umd/-/babel-plugin-transform-es2015-modules-umd-6.24.1.tgz#ac997e6285cd18ed6176adb607d602344ad38468"
+  dependencies:
+    babel-plugin-transform-es2015-modules-amd "^6.24.1"
+    babel-runtime "^6.22.0"
+    babel-template "^6.24.1"
+
+babel-plugin-transform-es2015-object-super@^6.24.1, babel-plugin-transform-es2015-object-super@^6.8.0:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-object-super/-/babel-plugin-transform-es2015-object-super-6.24.1.tgz#24cef69ae21cb83a7f8603dad021f572eb278f8d"
   dependencies:
     babel-helper-replace-supers "^6.24.1"
     babel-runtime "^6.22.0"
 
-babel-plugin-transform-es2015-parameters@6.x, babel-plugin-transform-es2015-parameters@^6.5.0, babel-plugin-transform-es2015-parameters@^6.8.0:
+babel-plugin-transform-es2015-parameters@6.x, babel-plugin-transform-es2015-parameters@^6.24.1, babel-plugin-transform-es2015-parameters@^6.5.0, babel-plugin-transform-es2015-parameters@^6.8.0:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-parameters/-/babel-plugin-transform-es2015-parameters-6.24.1.tgz#57ac351ab49caf14a97cd13b09f66fdf0a625f2b"
   dependencies:
@@ -1219,20 +1457,20 @@ babel-plugin-transform-es2015-parameters@6.x, babel-plugin-transform-es2015-para
     babel-traverse "^6.24.1"
     babel-types "^6.24.1"
 
-babel-plugin-transform-es2015-shorthand-properties@6.x, babel-plugin-transform-es2015-shorthand-properties@^6.5.0, babel-plugin-transform-es2015-shorthand-properties@^6.8.0:
+babel-plugin-transform-es2015-shorthand-properties@6.x, babel-plugin-transform-es2015-shorthand-properties@^6.24.1, babel-plugin-transform-es2015-shorthand-properties@^6.5.0, babel-plugin-transform-es2015-shorthand-properties@^6.8.0:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-shorthand-properties/-/babel-plugin-transform-es2015-shorthand-properties-6.24.1.tgz#24f875d6721c87661bbd99a4622e51f14de38aa0"
   dependencies:
     babel-runtime "^6.22.0"
     babel-types "^6.24.1"
 
-babel-plugin-transform-es2015-spread@6.x, babel-plugin-transform-es2015-spread@^6.5.0, babel-plugin-transform-es2015-spread@^6.8.0:
+babel-plugin-transform-es2015-spread@6.x, babel-plugin-transform-es2015-spread@^6.22.0, babel-plugin-transform-es2015-spread@^6.5.0, babel-plugin-transform-es2015-spread@^6.8.0:
   version "6.22.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-spread/-/babel-plugin-transform-es2015-spread-6.22.0.tgz#d6d68a99f89aedc4536c81a542e8dd9f1746f8d1"
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-transform-es2015-sticky-regex@6.x:
+babel-plugin-transform-es2015-sticky-regex@6.x, babel-plugin-transform-es2015-sticky-regex@^6.24.1:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-sticky-regex/-/babel-plugin-transform-es2015-sticky-regex-6.24.1.tgz#00c1cdb1aca71112cdf0cf6126c2ed6b457ccdbc"
   dependencies:
@@ -1240,13 +1478,19 @@ babel-plugin-transform-es2015-sticky-regex@6.x:
     babel-runtime "^6.22.0"
     babel-types "^6.24.1"
 
-babel-plugin-transform-es2015-template-literals@^6.5.0, babel-plugin-transform-es2015-template-literals@^6.8.0:
+babel-plugin-transform-es2015-template-literals@^6.22.0, babel-plugin-transform-es2015-template-literals@^6.5.0, babel-plugin-transform-es2015-template-literals@^6.8.0:
   version "6.22.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-template-literals/-/babel-plugin-transform-es2015-template-literals-6.22.0.tgz#a84b3450f7e9f8f1f6839d6d687da84bb1236d8d"
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-transform-es2015-unicode-regex@6.x:
+babel-plugin-transform-es2015-typeof-symbol@^6.22.0:
+  version "6.23.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-typeof-symbol/-/babel-plugin-transform-es2015-typeof-symbol-6.23.0.tgz#dec09f1cddff94b52ac73d505c84df59dcceb372"
+  dependencies:
+    babel-runtime "^6.22.0"
+
+babel-plugin-transform-es2015-unicode-regex@6.x, babel-plugin-transform-es2015-unicode-regex@^6.24.1:
   version "6.24.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-unicode-regex/-/babel-plugin-transform-es2015-unicode-regex-6.24.1.tgz#d38b12f42ea7323f729387f18a7c5ae1faeb35e9"
   dependencies:
@@ -1294,7 +1538,7 @@ babel-plugin-transform-object-assign@^6.5.0:
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-transform-object-rest-spread@^6.20.2, babel-plugin-transform-object-rest-spread@^6.5.0, babel-plugin-transform-object-rest-spread@^6.8.0:
+babel-plugin-transform-object-rest-spread@^6.20.2, babel-plugin-transform-object-rest-spread@^6.22.0, babel-plugin-transform-object-rest-spread@^6.5.0, babel-plugin-transform-object-rest-spread@^6.8.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-object-rest-spread/-/babel-plugin-transform-object-rest-spread-6.26.0.tgz#0f36692d50fef6b7e2d4b3ac1478137a963b7b06"
   dependencies:
@@ -1322,7 +1566,7 @@ babel-plugin-transform-react-jsx@^6.5.0, babel-plugin-transform-react-jsx@^6.8.0
     babel-plugin-syntax-jsx "^6.8.0"
     babel-runtime "^6.22.0"
 
-babel-plugin-transform-regenerator@^6.5.0:
+babel-plugin-transform-regenerator@^6.24.1, babel-plugin-transform-regenerator@^6.5.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-regenerator/-/babel-plugin-transform-regenerator-6.26.0.tgz#e0703696fbde27f0a3efcacf8b4dca2f7b3a8f2f"
   dependencies:
@@ -1348,6 +1592,35 @@ babel-preset-es2015-node@^6.1.1:
     babel-plugin-transform-es2015-sticky-regex "6.x"
     babel-plugin-transform-es2015-unicode-regex "6.x"
     semver "5.x"
+
+babel-preset-es2015@^6.24.1:
+  version "6.24.1"
+  resolved "https://registry.yarnpkg.com/babel-preset-es2015/-/babel-preset-es2015-6.24.1.tgz#d44050d6bc2c9feea702aaf38d727a0210538939"
+  dependencies:
+    babel-plugin-check-es2015-constants "^6.22.0"
+    babel-plugin-transform-es2015-arrow-functions "^6.22.0"
+    babel-plugin-transform-es2015-block-scoped-functions "^6.22.0"
+    babel-plugin-transform-es2015-block-scoping "^6.24.1"
+    babel-plugin-transform-es2015-classes "^6.24.1"
+    babel-plugin-transform-es2015-computed-properties "^6.24.1"
+    babel-plugin-transform-es2015-destructuring "^6.22.0"
+    babel-plugin-transform-es2015-duplicate-keys "^6.24.1"
+    babel-plugin-transform-es2015-for-of "^6.22.0"
+    babel-plugin-transform-es2015-function-name "^6.24.1"
+    babel-plugin-transform-es2015-literals "^6.22.0"
+    babel-plugin-transform-es2015-modules-amd "^6.24.1"
+    babel-plugin-transform-es2015-modules-commonjs "^6.24.1"
+    babel-plugin-transform-es2015-modules-systemjs "^6.24.1"
+    babel-plugin-transform-es2015-modules-umd "^6.24.1"
+    babel-plugin-transform-es2015-object-super "^6.24.1"
+    babel-plugin-transform-es2015-parameters "^6.24.1"
+    babel-plugin-transform-es2015-shorthand-properties "^6.24.1"
+    babel-plugin-transform-es2015-spread "^6.22.0"
+    babel-plugin-transform-es2015-sticky-regex "^6.24.1"
+    babel-plugin-transform-es2015-template-literals "^6.22.0"
+    babel-plugin-transform-es2015-typeof-symbol "^6.22.0"
+    babel-plugin-transform-es2015-unicode-regex "^6.24.1"
+    babel-plugin-transform-regenerator "^6.24.1"
 
 babel-preset-expo@^4.0.0:
   version "4.0.0"
@@ -1469,6 +1742,25 @@ babel-preset-react-native@^4.0.0:
     babel-template "^6.24.1"
     react-transform-hmr "^1.0.4"
 
+babel-preset-stage-2@^6.24.1:
+  version "6.24.1"
+  resolved "https://registry.yarnpkg.com/babel-preset-stage-2/-/babel-preset-stage-2-6.24.1.tgz#d9e2960fb3d71187f0e64eec62bc07767219bdc1"
+  dependencies:
+    babel-plugin-syntax-dynamic-import "^6.18.0"
+    babel-plugin-transform-class-properties "^6.24.1"
+    babel-plugin-transform-decorators "^6.24.1"
+    babel-preset-stage-3 "^6.24.1"
+
+babel-preset-stage-3@^6.24.1:
+  version "6.24.1"
+  resolved "https://registry.yarnpkg.com/babel-preset-stage-3/-/babel-preset-stage-3-6.24.1.tgz#836ada0a9e7a7fa37cb138fb9326f87934a48395"
+  dependencies:
+    babel-plugin-syntax-trailing-function-commas "^6.22.0"
+    babel-plugin-transform-async-generator-functions "^6.24.1"
+    babel-plugin-transform-async-to-generator "^6.24.1"
+    babel-plugin-transform-exponentiation-operator "^6.24.1"
+    babel-plugin-transform-object-rest-spread "^6.22.0"
+
 babel-register@^6.24.1, babel-register@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-register/-/babel-register-6.26.0.tgz#6ed021173e2fcb486d7acb45c6009a856f647071"
@@ -1572,6 +1864,10 @@ bcrypt-pbkdf@^1.0.0:
 big-integer@^1.6.7:
   version "1.6.32"
   resolved "https://registry.yarnpkg.com/big-integer/-/big-integer-1.6.32.tgz#5867458b25ecd5bcb36b627c30bb501a13c07e89"
+
+bit-twiddle@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/bit-twiddle/-/bit-twiddle-1.0.2.tgz#0c6c1fabe2b23d17173d9a61b7b7093eb9e1769e"
 
 bplist-creator@0.0.7:
   version "0.0.7"
@@ -1827,6 +2123,10 @@ color-name@1.1.1:
 color-name@^1.0.0:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.3.tgz#a7d0558bd89c42f795dd42328f740831ca53bc25"
+
+color-parser@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/color-parser/-/color-parser-0.1.0.tgz#8e17c93ca02cc7b4d998d9b20cc6b0c8e1ce19ca"
 
 color-string@^1.5.2:
   version "1.5.2"
@@ -2114,6 +2414,10 @@ domexception@^1.0.0:
   dependencies:
     webidl-conversions "^4.0.2"
 
+earcut@2.1.3, earcut@^2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/earcut/-/earcut-2.1.3.tgz#ca579545f351941af7c3d0df49c9f7d34af99b0c"
+
 ecc-jsbn@~0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/ecc-jsbn/-/ecc-jsbn-0.1.1.tgz#0fc73a9ed5f0d53c38193398523ef7e543777505"
@@ -2232,6 +2536,10 @@ event-target-shim@^1.0.5:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/event-target-shim/-/event-target-shim-1.1.1.tgz#a86e5ee6bdaa16054475da797ccddf0c55698491"
 
+eventemitter3@^2.0.0:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-2.0.3.tgz#b5e1079b59fb5e1ba2771c0a993be060a58c99ba"
+
 eventemitter3@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-3.1.0.tgz#090b4d6cdbd645ed10bf750d4b5407942d7ba163"
@@ -2304,6 +2612,25 @@ expect@^22.4.0:
     jest-matcher-utils "^22.4.3"
     jest-message-util "^22.4.3"
     jest-regex-util "^22.4.3"
+
+expo-asset-utils@^0.0.4-alpha.0:
+  version "0.0.4-alpha.2"
+  resolved "https://registry.yarnpkg.com/expo-asset-utils/-/expo-asset-utils-0.0.4-alpha.2.tgz#c559a490c326cb35fcfa1362e2dc1cc1b8284b35"
+
+expo-pixi@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/expo-pixi/-/expo-pixi-0.2.4.tgz#b56817967d92a0010bd09155a301eb2bdde9c9d5"
+  dependencies:
+    "@expo/browser-polyfill" "^0.0.0-alpha.3"
+    babel-preset-es2015 "^6.24.1"
+    babel-preset-expo "^4.0.0"
+    babel-preset-stage-2 "^6.24.1"
+    expo-asset-utils "^0.0.4-alpha.0"
+    path "^0.12.7"
+    pixi-filters "*"
+    pixi-spine "^1.5.11"
+    pixi.js "^4.7.0"
+    url "^0.11.0"
 
 expo@^28.0.1:
   version "28.0.0"
@@ -2378,6 +2705,14 @@ extglob@^2.0.4:
     regex-not "^1.0.0"
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
+
+extrude-polyline@1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/extrude-polyline/-/extrude-polyline-1.0.6.tgz#7e6afe1f349a4182fa3f61a00d93979b95f18b20"
+  dependencies:
+    as-number "^1.0.0"
+    gl-vec2 "^1.0.0"
+    polyline-miter-util "^1.0.1"
 
 extsprintf@1.3.0:
   version "1.3.0"
@@ -2661,6 +2996,14 @@ getpass@^0.1.1:
   resolved "https://registry.yarnpkg.com/getpass/-/getpass-0.1.7.tgz#5eff8e3e684d569ae4cb2b1282604e8ba62149fa"
   dependencies:
     assert-plus "^1.0.0"
+
+gl-matrix@2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/gl-matrix/-/gl-matrix-2.6.1.tgz#1bc7f7b396f4ae80abdb4db9a98cd07d170b9004"
+
+gl-vec2@^1.0.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/gl-vec2/-/gl-vec2-1.2.0.tgz#b0af95d2a582e3ad818446a1800093fc60b8b212"
 
 glob-base@^0.3.0:
   version "0.3.0"
@@ -3159,6 +3502,10 @@ isarray@1.0.0, isarray@~1.0.0:
 isexe@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
+
+ismobilejs@^0.4.0:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/ismobilejs/-/ismobilejs-0.4.1.tgz#1a5f126c70fed39c93da380fa62cbae5723e7dc2"
 
 isobject@^2.0.0:
   version "2.1.0"
@@ -4091,6 +4438,10 @@ min-document@^2.19.0:
   dependencies:
     dom-walk "^0.1.0"
 
+mini-signals@^1.1.1:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/mini-signals/-/mini-signals-1.2.0.tgz#45b08013c5fae51a24aa1a935cd317c9ed721d74"
+
 minimatch@^3.0.3, minimatch@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
@@ -4296,6 +4647,10 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
+nwmatcher@^1.4.1:
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/nwmatcher/-/nwmatcher-1.4.4.tgz#2285631f34a95f0d0395cd900c96ed39b58f346e"
+
 nwsapi@^2.0.0:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/nwsapi/-/nwsapi-2.0.4.tgz#dc79040a5f77b97716dc79565fc7fc3ef7d50570"
@@ -4471,6 +4826,10 @@ parse-json@^2.2.0:
   dependencies:
     error-ex "^1.2.0"
 
+parse-uri@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/parse-uri/-/parse-uri-1.0.0.tgz#2872dcc22f1a797acde1583d8a0ac29552ddac20"
+
 parse5@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-4.0.0.tgz#6d78656e3da8d78b4ec0b906f7c08ef1dfe3f608"
@@ -4535,6 +4894,13 @@ path-type@^3.0.0:
   dependencies:
     pify "^3.0.0"
 
+path@^0.12.7:
+  version "0.12.7"
+  resolved "https://registry.yarnpkg.com/path/-/path-0.12.7.tgz#d4dc2a506c4ce2197eb481ebfcd5b36c0140b10f"
+  dependencies:
+    process "^0.11.1"
+    util "^0.10.3"
+
 pegjs@^0.10.0:
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/pegjs/-/pegjs-0.10.0.tgz#cf8bafae6eddff4b5a7efb185269eaaf4610ddbd"
@@ -4566,6 +4932,65 @@ pirates@^3.0.1:
   resolved "https://registry.yarnpkg.com/pirates/-/pirates-3.0.2.tgz#7e6f85413fd9161ab4e12b539b06010d85954bb9"
   dependencies:
     node-modules-regexp "^1.0.0"
+
+pixi-filters@*:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/pixi-filters/-/pixi-filters-2.6.1.tgz#30b413f7fcdaafeac1bd50cad8be3aeb44897681"
+  dependencies:
+    "@pixi/filter-adjustment" "^2.5.0"
+    "@pixi/filter-advanced-bloom" "^2.6.0"
+    "@pixi/filter-ascii" "^2.5.0"
+    "@pixi/filter-bevel" "^2.6.0"
+    "@pixi/filter-bloom" "^2.5.0"
+    "@pixi/filter-bulge-pinch" "^2.6.0"
+    "@pixi/filter-color-map" "^2.6.0"
+    "@pixi/filter-color-replace" "^2.6.0"
+    "@pixi/filter-convolution" "^2.6.0"
+    "@pixi/filter-cross-hatch" "^2.5.0"
+    "@pixi/filter-crt" "^2.6.0"
+    "@pixi/filter-dot" "^2.5.0"
+    "@pixi/filter-drop-shadow" "^2.6.0"
+    "@pixi/filter-emboss" "^2.5.0"
+    "@pixi/filter-glitch" "^2.6.1"
+    "@pixi/filter-glow" "^2.5.0"
+    "@pixi/filter-godray" "^2.6.0"
+    "@pixi/filter-kawase-blur" "^2.6.0"
+    "@pixi/filter-motion-blur" "^2.6.1"
+    "@pixi/filter-multi-color-replace" "^2.5.0"
+    "@pixi/filter-old-film" "^2.6.0"
+    "@pixi/filter-outline" "^2.6.0"
+    "@pixi/filter-pixelate" "^2.5.0"
+    "@pixi/filter-radial-blur" "^2.6.0"
+    "@pixi/filter-reflection" "^2.6.0"
+    "@pixi/filter-rgb-split" "^2.5.0"
+    "@pixi/filter-shockwave" "^2.6.1"
+    "@pixi/filter-simple-lightmap" "^2.6.0"
+    "@pixi/filter-tilt-shift" "^2.6.0"
+    "@pixi/filter-twist" "^2.5.0"
+    "@pixi/filter-zoom-blur" "^2.6.0"
+
+pixi-gl-core@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/pixi-gl-core/-/pixi-gl-core-1.1.4.tgz#8b4b5c433b31e419bc379dc565ce1b835a91b372"
+
+pixi-spine@^1.5.11:
+  version "1.5.16"
+  resolved "https://registry.yarnpkg.com/pixi-spine/-/pixi-spine-1.5.16.tgz#d024a603b815035be9f23fac480d4de32f159571"
+  dependencies:
+    "@types/pixi.js" "^4.5.3"
+
+pixi.js@^4.7.0:
+  version "4.8.1"
+  resolved "https://registry.yarnpkg.com/pixi.js/-/pixi.js-4.8.1.tgz#e35f370b0c635b5c542014d0649317d63d2ec7c4"
+  dependencies:
+    bit-twiddle "^1.0.2"
+    earcut "^2.1.3"
+    eventemitter3 "^2.0.0"
+    ismobilejs "^0.4.0"
+    object-assign "^4.0.1"
+    pixi-gl-core "^1.1.4"
+    remove-array-items "^1.0.0"
+    resource-loader "^2.1.1"
 
 pkg-dir@^2.0.0:
   version "2.0.0"
@@ -4603,6 +5028,12 @@ plugin-error@^0.1.2:
 pn@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
+
+polyline-miter-util@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/polyline-miter-util/-/polyline-miter-util-1.0.1.tgz#b693f2389ea0ded36a6bcf5ecd2ece4b6917d957"
+  dependencies:
+    gl-vec2 "^1.0.0"
 
 posix-character-classes@^0.1.0:
   version "0.1.1"
@@ -4646,6 +5077,10 @@ process-nextick-args@~2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.0.tgz#a37d732f4271b4ab1ad070d35508e8290788ffaa"
 
+process@^0.11.1:
+  version "0.11.10"
+  resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
+
 process@~0.5.1:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/process/-/process-0.5.2.tgz#1638d8a8e34c2f440a91db95ab9aeb677fc185cf"
@@ -4684,6 +5119,10 @@ psl@^1.1.24:
   version "1.1.28"
   resolved "https://registry.yarnpkg.com/psl/-/psl-1.1.28.tgz#4fb6ceb08a1e2214d4fd4de0ca22dae13740bc7b"
 
+punycode@1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.3.2.tgz#9653a036fb7c1ee42342f2325cceefea3926c48d"
+
 punycode@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
@@ -4695,6 +5134,10 @@ punycode@^2.1.0:
 qs@^6.5.0, qs@^6.5.2, qs@~6.5.1:
   version "6.5.2"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
+
+querystring@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
 
 randomatic@^3.0.0:
   version "3.0.0"
@@ -4743,6 +5186,10 @@ react-lifecycles-compat@^3, react-lifecycles-compat@^3.0.4:
 react-native-branch@2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/react-native-branch/-/react-native-branch-2.2.5.tgz#4074dd63b4973e6397d9ce50e97b57c77a518e9d"
+
+react-native-console-time-polyfill@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/react-native-console-time-polyfill/-/react-native-console-time-polyfill-0.0.6.tgz#7823d86fe83439c74480d1b124a92b1a78571889"
 
 react-native-dismiss-keyboard@1.0.0:
   version "1.0.0"
@@ -5089,6 +5536,10 @@ regjsparser@^0.1.4:
   dependencies:
     jsesc "~0.5.0"
 
+remove-array-items@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/remove-array-items/-/remove-array-items-1.0.0.tgz#07bf42cb332f4cf6e85ead83b5e4e896d2326b21"
+
 remove-trailing-separator@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/remove-trailing-separator/-/remove-trailing-separator-1.1.0.tgz#c24bce2a283adad5bc3f58e0d48249b92379d8ef"
@@ -5177,6 +5628,13 @@ resolve@^1.2.0, resolve@^1.3.2, resolve@^1.5.0:
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.8.1.tgz#82f1ec19a423ac1fbd080b0bab06ba36e84a7a26"
   dependencies:
     path-parse "^1.0.5"
+
+resource-loader@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/resource-loader/-/resource-loader-2.1.1.tgz#f03ec08dd26aae0b0dd2a24a6d312aec2b5a004d"
+  dependencies:
+    mini-signals "^1.1.1"
+    parse-uri "^1.0.0"
 
 restore-cursor@^2.0.0:
   version "2.0.0"
@@ -5534,6 +5992,10 @@ stream-buffers@~2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/stream-buffers/-/stream-buffers-2.2.0.tgz#91d5f5130d1cef96dcfa7f726945188741d09ee4"
 
+string-format@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/string-format/-/string-format-2.0.0.tgz#f2df2e7097440d3b65de31b6d40d54c96eaffb9b"
+
 string-length@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/string-length/-/string-length-2.0.0.tgz#d40dbb686a3ace960c1cffca562bf2c45f8363ed"
@@ -5640,6 +6102,10 @@ test-exclude@^4.2.1:
     object-assign "^4.1.0"
     read-pkg-up "^1.0.1"
     require-main-filename "^1.0.1"
+
+text-encoding@^0.6.4:
+  version "0.6.4"
+  resolved "https://registry.yarnpkg.com/text-encoding/-/text-encoding-0.6.4.tgz#e399a982257a276dae428bb92845cb71bdc26d19"
 
 text-table@^0.2.0:
   version "0.2.0"
@@ -5811,6 +6277,13 @@ urix@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/urix/-/urix-0.1.0.tgz#da937f7a62e21fec1fd18d49b35c2935067a6c72"
 
+url@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/url/-/url-0.11.0.tgz#3838e97cfc60521eb73c525a8e55bfdd9e2e28f1"
+  dependencies:
+    punycode "1.3.2"
+    querystring "0.2.0"
+
 use@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/use/-/use-3.1.0.tgz#14716bf03fdfefd03040aef58d8b4b85f3a7c544"
@@ -5827,6 +6300,12 @@ util.promisify@^1.0.0:
   dependencies:
     define-properties "^1.1.2"
     object.getownpropertydescriptors "^2.0.3"
+
+util@^0.10.3:
+  version "0.10.4"
+  resolved "https://registry.yarnpkg.com/util/-/util-0.10.4.tgz#3aa0125bfe668a4672de58857d3ace27ecb76901"
+  dependencies:
+    inherits "2.0.3"
 
 utils-merge@1.0.1:
   version "1.0.1"
@@ -6040,6 +6519,12 @@ xmldoc@^0.4.0:
   resolved "https://registry.yarnpkg.com/xmldoc/-/xmldoc-0.4.0.tgz#d257224be8393eaacbf837ef227fd8ec25b36888"
   dependencies:
     sax "~1.1.1"
+
+xmldom-qsa@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/xmldom-qsa/-/xmldom-qsa-1.0.3.tgz#3b70a440997982aa323f911a8b8c3c7db6a6ff1f"
+  dependencies:
+    nwmatcher "^1.4.1"
 
 xmldom@0.1.x:
   version "0.1.27"
