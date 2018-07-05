@@ -45,11 +45,11 @@ export default class MainScreen extends React.Component {
     // })
   }
 
-  async onPressText() {
+  async onSubmitText() {
     Database.uploadContent({
       user: config.user, // auth stuff here?
       type: 'text',
-      text: 'Hello world'
+      text: this.state.textInputValue
     })
     .then(res => {
       this.getEntries()
@@ -59,6 +59,7 @@ export default class MainScreen extends React.Component {
         this.scrollToEnd()
       }, 100)
     })
+    this.setState({ textInputValue: '' })
   }
 
   async onPressPicture() {
@@ -97,18 +98,18 @@ export default class MainScreen extends React.Component {
     })
   }
 
-  addEntry() {
-    if (this.state.textInputValue) {
-      const old = this.state.entryArray
-      const id = uuid()
-      const date = new Date()
-      const text = this.state.textInputValue
-      const entry = {id, date, text}
-      this.setState({ entryArray: [...old, entry] })
-      this.setState({ textInputValue: '' })
-      Database.addContent(entry)
-    }
-  }
+  // addEntry() {
+  //   if (this.state.textInputValue) {
+  //     const old = this.state.entryArray
+  //     const id = uuid()
+  //     const date = new Date()
+  //     const text = this.state.textInputValue
+  //     const entry = {id, date, text}
+  //     this.setState({ entryArray: [...old, entry] })
+  //     this.setState({ textInputValue: '' })
+  //     Database.addContent(entry)
+  //   }
+  // }
 
   deleteEntry(id) {
     Vibration.cancel()
@@ -147,9 +148,9 @@ export default class MainScreen extends React.Component {
         <Footer
           navigation={this.props.navigation}
           onChangeText={this.updateTextInputValue.bind(this)}
-          onSubmitEditing={this.addEntry.bind(this)}
+          onSubmitText={this.onSubmitText.bind(this)}
           value={this.state.textInputValue}
-          onPressText={this.onPressText.bind(this)}
+          onSubmitText={this.onSubmitText.bind(this)}
           onPressPicture={this.onPressPicture.bind(this)}
           onPressGif={this.onPressGif.bind(this)}
         />

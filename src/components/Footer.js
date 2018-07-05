@@ -11,6 +11,36 @@ import {
 import config from '../config'
 
 export default class Footer extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      shouldShowTextInput: false
+    }
+  }
+
+  renderTextInput = () => {
+    if (this.state.shouldShowTextInput) {
+      return (
+        <TextInput 
+          autoFocus={true}
+          blurOnSubmit={true}
+          onBlur={()=>{this.setState({shouldShowTextInput: false})}}
+          keyBoardAppearance={'dark'}
+          onChangeText={this.props.onChangeText}
+          onSubmitEditing={this.props.onSubmitText}
+          value={this.props.value}
+          placeholder='New Note'
+          placeholderTextColor={config.colors.grayedOut}
+          underlineColorAndroid='transparent'
+          style={styles.textInput}>
+        </TextInput>
+      )
+    }
+  }
+
+  onPressText = () => {
+    this.setState({shouldShowTextInput: true})
+  }
 
   render() {
     return (
@@ -19,7 +49,7 @@ export default class Footer extends React.Component {
 
           {/* Write */}
           {/* Should focus the text input */}
-          <TouchableOpacity style={styles.addContentButton} onPress={this.props.onPressText}>
+          <TouchableOpacity style={styles.addContentButton} onPress={this.onPressText}>
             <Image style={styles.addContentIcon} source={config.icons.text}/>
           </TouchableOpacity>
 
@@ -38,17 +68,7 @@ export default class Footer extends React.Component {
             <Image style={styles.addContentIcon} source={config.icons.gif}/>
           </TouchableOpacity>
         </View>
-        {/* <TextInput 
-          blurOnSubmit={true}
-          keyBoardAppearance={'dark'}
-          onChangeText={this.props.onChangeText}
-          onSubmitEditing={this.props.onSubmitEditing}
-          value={this.props.value}
-          placeholder='New Note'
-          placeholderTextColor={config.colors.grayedOut}
-          underlineColorAndroid='transparent'
-          style={styles.textInput}>
-        </TextInput> */}
+        {this.renderTextInput()}
       </KeyboardAvoidingView>
     )
   }
