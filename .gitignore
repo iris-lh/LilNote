@@ -4,3 +4,5 @@ npm-debug.*
 todo.auto.md
 
 android/build
+
+yarn-error.log
