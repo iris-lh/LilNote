@@ -81,11 +81,7 @@ export default class Database {
     })
   }
 
-  static deleteNote(id) {
-    fetch(config.databaseUrl + '/notes/' + id + '.json', {
-      method: 'DELETE',
-    })
-    .then(res => console.log(res))
-    .catch(err => console.log(err))
+  static deleteEntry(id) {
+  
   }
 }

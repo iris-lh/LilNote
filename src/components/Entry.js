@@ -14,23 +14,20 @@ import config from '../config'
 
 
 const shibe = 'https://vignette.wikia.nocookie.net/aceattorney/images/f/f7/Missile_AAI.png'
-const shibeFirebase = 'https://firebasestorage.googleapis.com/v0/b/lilnote-965c1.appspot.com/o/images%2FMissile_AAI.png?alt=media&token=e8a8c281-7aed-4fcb-8bab-b93ca2dd9098'
-const test = 'https://firebasestorage.googleapis.com/v0/b/lilnote-965c1.appspot.com/o/images%2Fe289e3a0-7f32-11e8-b32d-f1ee6a0cd883.jpg?alt=media&token=95eb2ac2-6b69-4e6c-94b7-49a85f491874'
+const shibeFirebase = 'https://firebasestorage.googleapis.com/v0/b/lilentry-965c1.appspot.com/o/images%2FMissile_AAI.png?alt=media&token=e8a8c281-7aed-4fcb-8bab-b93ca2dd9098'
+const test = 'https://firebasestorage.googleapis.com/v0/b/lilentry-965c1.appspot.com/o/images%2Fe289e3a0-7f32-11e8-b32d-f1ee6a0cd883.jpg?alt=media&token=95eb2ac2-6b69-4e6c-94b7-49a85f491874'
 
 
-export default class Note extends React.Component {
+export default class Entry extends React.Component {
   formatDate(date) {
-    // return date
     return moment(date).format('MM/DD/YYYY, h:mm a')
-    // return moment()
-    // return Date.parse(date)
   }
 
   renderText() {
     return (
-      <View style={styles.note} id={this.props.id}>
-        <Text style={styles.noteDate}> {this.formatDate(this.props.date)} </Text>
-        <Text style={styles.noteContent}> {this.props.content} </Text>
+      <View style={styles.entry} id={this.props.id}>
+        <Text style={styles.entryDate}> {this.formatDate(this.props.date)} </Text>
+        <Text style={styles.entryContent}> {this.props.content} </Text>
 
         <TouchableOpacity 
           style={styles.deleteButton} 
@@ -56,10 +53,10 @@ export default class Note extends React.Component {
 
   renderImage() {
     return (
-      <View style={styles.note} id={this.props.id}>
+      <View style={styles.entry} id={this.props.id}>
         {this.createImageComponent()}
-        <Text style={styles.noteDate}> {this.formatDate(this.props.date)} </Text>
-        <Text style={styles.noteContent}> IMAGE {this.props.id} </Text>
+        <Text style={styles.entryDate}> {this.formatDate(this.props.date)} </Text>
+        <Text style={styles.entryContent}> IMAGE {this.props.id} </Text>
 
         <TouchableOpacity 
           style={styles.deleteButton} 
@@ -74,10 +71,10 @@ export default class Note extends React.Component {
 
   renderGif() {
     return (
-      <View style={styles.note} id={this.props.id}>
+      <View style={styles.entry} id={this.props.id}>
         <Image style={styles.imageContent} source={{uri: this.props.content}}/>
-        <Text style={styles.noteDate}> {this.formatDate(this.props.date)} </Text>
-        <Text style={styles.noteContent}> GIF {this.props.content} </Text>
+        <Text style={styles.entryDate}> {this.formatDate(this.props.date)} </Text>
+        <Text style={styles.entryContent}> GIF {this.props.content} </Text>
 
         <TouchableOpacity 
           style={styles.deleteButton} 
@@ -103,7 +100,7 @@ export default class Note extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  note: {
+  entry: {
     position: 'relative',
     padding: 20,
     marginBottom: 20,
@@ -118,11 +115,11 @@ const styles = StyleSheet.create({
 
     elevation: 5,
   },
-  noteDate: {
+  entryDate: {
     color: config.colors.grayedOut,
     // paddingLeft: 20,
   },
-  noteContent: {
+  entryContent: {
     // paddingLeft: 20,
     borderLeftColor: config.colors.primary
   },

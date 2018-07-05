@@ -8,7 +8,7 @@ import {
   Vibration
 } from 'react-native';
 
-import Note from './Note'
+import Entry from './Entry'
 import EmptyPage from './EmptyPage'
 
 import config from '../config'
@@ -19,17 +19,17 @@ export default class ContentView extends React.Component {
     this.scrollView.scrollToEnd({animated: true})
   }
 
-  renderNotes() {
+  renderEntries() {
     if (this.props.entryArray.length > 0) {
       return this.props.entryArray.map((entry, key) => {
         return (
-          <Note 
+          <Entry 
             key={entry.id}
             id={entry.id}
             date={entry.date}
             type={entry.type}
             content={entry.content}
-            deleteMethod={this.props.deleteNote.bind(this)}
+            deleteMethod={this.props.deleteEntry.bind(this)}
           />
         )
       })
@@ -48,7 +48,7 @@ export default class ContentView extends React.Component {
         ref={ref => this.scrollView = ref}
         style={styles.scrollContainer} 
         contentContainerStyle={styles.contentContainer}>
-        {this.renderNotes()}
+        {this.renderEntries()}
       </ScrollView>
     )
   }
