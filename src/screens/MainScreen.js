@@ -77,11 +77,11 @@ export default class MainScreen extends React.Component {
     })
   }
 
-  async onPressGif() {
+  async onSelectGif(url) {
     Database.uploadContent({
       user: config.user, // auth stuff here?
       type: 'gif',
-      url: 'https://i.giphy.com/media/11HkufsiNrBXK8/giphy.webp'
+      url: url
     })
     .then(res => {
       this.getEntries()
@@ -147,7 +147,7 @@ export default class MainScreen extends React.Component {
           value={this.state.textInputValue}
           onSubmitText={this.onSubmitText.bind(this)}
           onPressPicture={this.onPressPicture.bind(this)}
-          onPressGif={this.onPressGif.bind(this)}
+          onSelectGif={this.onSelectGif.bind(this)}
         />
       </View>
     );

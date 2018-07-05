@@ -8,13 +8,16 @@ import {
   KeyboardAvoidingView,
 } from 'react-native';
 
+import GifScroller from './GifScroller'
+
 import config from '../config'
 
 export default class Footer extends React.Component {
   constructor() {
     super()
     this.state = {
-      inputMode: ''
+      inputMode: '',
+      gifSearch: ''
     }
   }
 
@@ -38,9 +41,42 @@ export default class Footer extends React.Component {
     } else if (this.state.inputMode === 'gif') {
       return (
         <View>
+          <GifScroller
+            inputText={this.state.gifSearch}
+            handleGifSelect={this.onSelectGif}
+            style={{}}/>
+          <TextInput
+            ref={ref => this.gifSearchBar = ref}
+            autoFocus={true}
+            blurOnSubmit={true}
+            returnKeyType='done'
+            onBlur={()=>{
+              this.setState({inputMode: ''})
+              this.setState({gifSearch: ''})
+            }}
+            keyBoardAppearance={'dark'}
+            onChangeText={this.onChangeGifSearch}
+            value={this.state.gifSearch}
+            placeholder='Search Gifs'
+            placeholderTextColor={config.colors.grayedOut}
+            underlineColorAndroid='transparent'
+            style={styles.textInput}>
+          </TextInput>
         </View>
       )
+    } else {
+      return this.renderButtons()
     }
+  }
+
+  onChangeGifSearch = (value) => {
+    this.setState({gifSearch: value})
+    this.forceUpdate()
+  }
+
+  onSelectGif = (gif) => {
+    this.props.onSelectGif(gif)
+    this.gifSearchBar.blur()
   }
 
   onPressText = () => {
@@ -51,32 +87,37 @@ export default class Footer extends React.Component {
     this.setState({inputMode: 'gif'})
   }
 
+  renderButtons = () => {
+    return (
+      <View style={styles.addContentButtonContainer}>
+        {/* Write */}
+        {/* Should focus the text input */}
+        <TouchableOpacity style={styles.addContentButton} onPress={this.onPressText}>
+          <Image style={styles.addContentIcon} source={config.icons.text}/>
+        </TouchableOpacity>
+
+        {/* Doodle */}
+        {/* <TouchableOpacity style={styles.addContentButton} onPress={()=>alert('Doodles coming soon!')}>
+          <Image style={styles.addContentIcon} source={config.icons.draw}/>
+        </TouchableOpacity> */}
+
+        {/* Take/Upload a picture */}
+        <TouchableOpacity style={styles.addContentButton} onPress={this.props.onPressPicture}>
+          <Image style={styles.addContentIcon} source={config.icons.photo}/>
+        </TouchableOpacity>
+
+        {/* Embed a gif */}
+        <TouchableOpacity style={styles.addContentButton} onPress={this.onPressGif}>
+          <Image style={styles.addContentIcon} source={config.icons.gif}/>
+        </TouchableOpacity>
+      </View>
+    )
+  }
+
   render() {
     return (
       <KeyboardAvoidingView style={styles.footer} behavior="padding">
-        <View style={styles.addContentButtonContainer}>
-
-          {/* Write */}
-          {/* Should focus the text input */}
-          <TouchableOpacity style={styles.addContentButton} onPress={this.onPressText}>
-            <Image style={styles.addContentIcon} source={config.icons.text}/>
-          </TouchableOpacity>
-
-          {/* Doodle */}
-          {/* <TouchableOpacity style={styles.addContentButton} onPress={()=>alert('Doodles coming soon!')}>
-            <Image style={styles.addContentIcon} source={config.icons.draw}/>
-          </TouchableOpacity> */}
-
-          {/* Take/Upload a picture */}
-          <TouchableOpacity style={styles.addContentButton} onPress={this.props.onPressPicture}>
-            <Image style={styles.addContentIcon} source={config.icons.photo}/>
-          </TouchableOpacity>
-
-          {/* Embed a gif */}
-          <TouchableOpacity style={styles.addContentButton} onPress={this.onPressGif}>
-            <Image style={styles.addContentIcon} source={config.icons.gif}/>
-          </TouchableOpacity>
-        </View>
+        
         {this.renderInput()}
       </KeyboardAvoidingView>
     )
