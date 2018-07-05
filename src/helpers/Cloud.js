@@ -6,7 +6,7 @@ import config from '../config'
 
 firebase.initializeApp(config.firebase)
 
-export default class Database {
+export default class Cloud {
   static uploadContent(content) {
     const stampedContent = {
       ...content, 

@@ -1,1 +1,1 @@
-export { default as Database } from './Database'
+export { default as Cloud } from './Cloud'

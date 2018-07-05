@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import { Camera, Permissions } from 'expo';
 
-import { Database } from '../helpers'
+import { Cloud } from '../helpers'
 
 
 export default class CameraScreen extends React.Component {

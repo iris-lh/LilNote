@@ -16,7 +16,7 @@ import ContentView from '../components/ContentView'
 import Footer from '../components/Footer'
 
 import config from '../config'
-import { Database } from '../helpers'
+import { Cloud } from '../helpers'
 
 
 export default class MainScreen extends React.Component {
@@ -36,7 +36,7 @@ export default class MainScreen extends React.Component {
   }
 
   getEntries() {
-    return Database.getEntries(config.user, entries => {
+    return Cloud.getEntries(config.user, entries => {
       this.setState({entryArray: entries})
       this.forceUpdate()
     })
@@ -47,7 +47,7 @@ export default class MainScreen extends React.Component {
   }
 
   async onSubmitTextEntry() {
-    Database.uploadContent({
+    Cloud.uploadContent({
       user: config.user, // auth stuff here?
       type: 'text',
       text: this.state.textEntryValue
@@ -67,7 +67,7 @@ export default class MainScreen extends React.Component {
     const permission = await Permissions.askAsync(Permissions.CAMERA_ROLL)
     const image = await ImagePicker.launchCameraAsync()
     const processed = await ImageManipulator.manipulate(image.uri, [{resize: {width: 300}}])
-    Database.uploadContent({
+    Cloud.uploadContent({
       user: config.user, // auth stuff here?
       type: 'image',
       uri: processed.uri
@@ -83,7 +83,7 @@ export default class MainScreen extends React.Component {
   }
 
   async onSelectGif(url) {
-    Database.uploadContent({
+    Cloud.uploadContent({
       user: config.user, // auth stuff here?
       type: 'gif',
       url: url
@@ -116,7 +116,7 @@ export default class MainScreen extends React.Component {
       return entry.id !== id
     })
     
-    Database.deleteEntry(config.user, id)
+    Cloud.deleteEntry(config.user, id)
     .then(res => {
       this.getEntries()
     })
@@ -143,7 +143,7 @@ export default class MainScreen extends React.Component {
   };
 
   onSubmitDoodle = async (uri) => {
-    Database.uploadContent({
+    Cloud.uploadContent({
       user: config.user, // auth stuff here?
       type: 'image',
       uri: uri
