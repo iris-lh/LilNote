@@ -56,7 +56,6 @@ export default class Entry extends React.Component {
       <View style={styles.entry} id={this.props.id}>
         {this.createImageComponent()}
         <Text style={styles.entryDate}> {this.formatDate(this.props.date)} </Text>
-        <Text style={styles.entryContent}> IMAGE {this.props.id} </Text>
 
         <TouchableOpacity 
           style={styles.deleteButton} 
@@ -74,7 +73,6 @@ export default class Entry extends React.Component {
       <View style={styles.entry} id={this.props.id}>
         <Image style={styles.imageContent} source={{uri: this.props.content}}/>
         <Text style={styles.entryDate}> {this.formatDate(this.props.date)} </Text>
-        <Text style={styles.entryContent}> GIF {this.props.content} </Text>
 
         <TouchableOpacity 
           style={styles.deleteButton} 
