@@ -149,7 +149,6 @@ export default class MainScreen extends React.Component {
       uri: uri
     })
     .then(res => {
-      this.updateInputMode('')
       this.getEntries()
     })
     .then(res => {

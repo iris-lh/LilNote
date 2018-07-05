@@ -33,6 +33,7 @@ export default class Doodle extends React.Component {
 
   onSubmitDoodle = () => {
     this.props.onSubmitDoodle(this.state.uri)
+    this.props.updateInputMode('')
   }
 
   render() {
