@@ -10,8 +10,6 @@ import {
 
 import Image from 'react-native-image-progress'
 
-// TODO maybe bring back the custom Image tag they were using
-
 import qs from 'qs';
 const giphyKey = '&api_key=dc6zaTOxFJmzC';
 

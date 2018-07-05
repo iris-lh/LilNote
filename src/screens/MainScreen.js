@@ -113,7 +113,6 @@ export default class MainScreen extends React.Component {
     Vibration.cancel()
     Vibration.vibrate()
 
-    // TODO is this part necessary anymore?
     const newArray = this.state.entryArray.filter(entry => {
       return entry.id !== id
     })

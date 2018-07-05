@@ -2,20 +2,22 @@
 
 To see in-code Todos, run `yarn todo` or `npm run todo`
 
-- Firebase authentication (probably google to start with)
+- Login screen
 
-- Switch database helper to using firebase module instead of raw fetch calls
+- Logout option
 
-- Finish "add text" button
+- Long press and then confirm to delete entry
 
-- Implement photos
+- Finish doodle component
 
-- Implement Videos
+- Add background to gif scroller
 
-- Implement gifs (GIPHY api?)
+- Higher res arrow icon
 
-- Implement doodling
+- Change entry side line color to secondary color
+
+- Make solid line version of the mascot icon
+
+- Make sad mascot face icon
 
 - Add color picker
-
-- Implement shadows for android that better fit the visual style
