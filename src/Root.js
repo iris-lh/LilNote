@@ -1,12 +1,12 @@
 import { createDrawerNavigator, createSwitchNavigator } from 'react-navigation'
 
-import NotesScreen from './screens/NotesScreen'
+import MainScreen from './screens/MainScreen'
 import CameraScreen from './screens/CameraScreen'
 import Menu from './components/Menu'
 
 export default Root = createDrawerNavigator({
-  Notes: {
-    screen: NotesScreen,
+  Main: {
+    screen: MainScreen,
   },
   Camera: {
     screen: CameraScreen
