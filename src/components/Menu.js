@@ -26,11 +26,9 @@ export default class MyNotificationsScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Header title='Asdf' style={{backgroundColor: config.colors.secondary}}/>
+        <Header title='Settings' style={{backgroundColor: config.colors.secondary}}/>
         <View style={styles.content}>
-          <DrawerButton title='Search & Filter' iconSource={config.icons.search}/>
           <DrawerButton title='Color Picker' iconSource={config.icons.paintPalette}/>
-          <DrawerButton title='Settings' iconSource={config.icons.settings}/>
           <DrawerButton title='Sign Out' iconSource={config.icons.signOut}/>
         </View>
       </View>
