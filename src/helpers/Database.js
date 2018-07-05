@@ -26,10 +26,8 @@ export default class Database {
   }
 
   static _uploadText(content) {
-    return firebase
-    .database()
-    .ref('users/' + content.user + '/entries/' + content.id)
-    .set({
+    const ref = 'users/' + content.user + '/entries/' + content.id
+    return firebase.database().ref(ref).set({
       date: content.date,
       dateNow: content.dateNow,
       id : content.id,
@@ -39,10 +37,8 @@ export default class Database {
   }
 
   static _uploadGif(content) {
-    return firebase
-    .database()
-    .ref('users/' + content.user + '/entries/' + content.id)
-    .set({
+    const ref = 'users/' + content.user + '/entries/' + content.id
+    return firebase.database().ref(ref).set({
       date: content.date,
       dateNow: content.dateNow,
       id : content.id,
@@ -52,13 +48,21 @@ export default class Database {
   }
 
   static async _uploadImage(content) {
+    const imageRef = 'images/'+content.id+'.jpg'
+    const entryRef = 'users/' + content.user + '/entries/' + content.id
     const response = await fetch(content.uri)
     const blob = await response.blob()
-    await firebase.storage().ref().child('images').child(content.id+'.jpg').put(blob)
-    const url = await firebase.storage().ref('images/'+content.id+'.jpg').getDownloadURL()
+
+    // Upload image to storage
+    await firebase.storage().ref(imageRef).put(blob)
+
+    // Get download url
+    const url = await firebase.storage().ref(imageRef).getDownloadURL()
+
+    // Update user entry
     return firebase // update user entry
     .database()
-    .ref('users/' + content.user + '/entries/' + content.id)
+    .ref(entryRef)
     .set({
       date: content.date,
       dateNow: content.dateNow,
@@ -69,11 +73,8 @@ export default class Database {
   }
 
   static getEntries(user, callback) {
-    return firebase
-    .database()
-    .ref('users/' + user + '/entries/')
-    .once('value')
-    .then(snapshot => {
+    const ref = 'users/' + user + '/entries/'
+    return firebase.database().ref(ref).once('value').then(snapshot => {
       const values = _.valuesIn(snapshot.val())
       const sorted = _.sortBy(values, val => parseInt(val.dateNow))
       callback(sorted)
