@@ -34,16 +34,15 @@ export default class MainScreen extends React.Component {
   }
 
   getEntries() {
-    Database.getEntries(config.user, entries => {
+    return Database.getEntries(config.user, entries => {
       this.setState({entryArray: entries})
       this.forceUpdate()
     })
-    .then(res => {
-      setTimeout(()=>{
-        // alert('got the content')
-        this.scrollToEnd()
-      }, 100)
-    })
+    // .then(res => {
+    //   setTimeout(()=>{
+    //     this.scrollToEnd()
+    //   }, 100)
+    // })
   }
 
   async onPressText() {
@@ -54,6 +53,11 @@ export default class MainScreen extends React.Component {
     })
     .then(res => {
       this.getEntries()
+    })
+    .then(res => {
+      setTimeout(()=>{
+        this.scrollToEnd()
+      }, 100)
     })
   }
 
@@ -70,6 +74,11 @@ export default class MainScreen extends React.Component {
       // alert('uploaded picture')
       this.getEntries()
     })
+    .then(res => {
+      setTimeout(()=>{
+        this.scrollToEnd()
+      }, 100)
+    })
   }
 
   async onPressGif() {
@@ -78,8 +87,14 @@ export default class MainScreen extends React.Component {
       type: 'gif',
       url: 'https://i.giphy.com/media/11HkufsiNrBXK8/giphy.webp'
     })
-    // alert('Uploaded dog gif')
-    this.getEntries()
+    .then(res => {
+      this.getEntries()
+    })
+    .then(res => {
+      setTimeout(()=>{
+        this.scrollToEnd()
+      }, 100)
+    })
   }
 
   addEntry() {
@@ -102,9 +117,12 @@ export default class MainScreen extends React.Component {
       return entry.id !== id
     })
     
-    this.setState({entryArray: newArray})
+    // this.setState({entryArray: newArray})
 
-    Database.deleteEntry(id)
+    Database.deleteEntry(config.user, id)
+    .then(res => {
+      this.getEntries()
+    })
   }
 
   updateTextInputValue(text) {

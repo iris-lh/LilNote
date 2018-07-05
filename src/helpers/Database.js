@@ -75,13 +75,25 @@ export default class Database {
     .once('value')
     .then(snapshot => {
       const values = _.valuesIn(snapshot.val())
-      // alert(JSON.stringify(values))
       const sorted = _.sortBy(values, val => parseInt(val.dateNow))
       callback(sorted)
     })
   }
 
-  static deleteEntry(id) {
-  
+  static async deleteEntry(user, id) {
+    // Get entry from database so that we can know its type
+    // TODO Do we really need this extra DB call?
+    const entryRef = 'users/' + user + '/entries/' + id
+    const snapshot = await firebase.database().ref(entryRef).once('value')
+    const entry = snapshot.val()
+
+    // Delete image from storage
+    if (entry.type === 'image') {
+      const imageRef = 'images/' + id + '.jpg'
+      firebase.storage().ref(imageRef).delete()
+    }
+
+    // Delete entry from database
+    return firebase.database().ref(entryRef).remove()
   }
 }
