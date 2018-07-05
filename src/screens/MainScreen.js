@@ -25,7 +25,9 @@ export default class MainScreen extends React.Component {
     this.state = {
       entryArray: [
       ],
-      textInputValue: ''
+      inputMode: '',
+      textEntryValue: '',
+      gifSearchValue: ''
     }
   }
 
@@ -40,11 +42,15 @@ export default class MainScreen extends React.Component {
     })
   }
 
-  async onSubmitText() {
+  updateInputMode(mode) {
+    this.setState({inputMode: mode})
+  }
+
+  async onSubmitTextEntry() {
     Database.uploadContent({
       user: config.user, // auth stuff here?
       type: 'text',
-      text: this.state.textInputValue
+      text: this.state.textEntryValue
     })
     .then(res => {
       this.getEntries()
@@ -54,7 +60,7 @@ export default class MainScreen extends React.Component {
         this.scrollToEnd()
       }, 100)
     })
-    this.setState({ textInputValue: '' })
+    this.setState({ textEntryValue: '' })
   }
 
   async onPressPicture() {
@@ -67,7 +73,6 @@ export default class MainScreen extends React.Component {
       uri: processed.uri
     })
     .then(res => {
-      // alert('uploaded picture')
       this.getEntries()
     })
     .then(res => {
@@ -93,36 +98,36 @@ export default class MainScreen extends React.Component {
     })
   }
 
-  // addEntry() {
-  //   if (this.state.textInputValue) {
-  //     const old = this.state.entryArray
-  //     const id = uuid()
-  //     const date = new Date()
-  //     const text = this.state.textInputValue
-  //     const entry = {id, date, text}
-  //     this.setState({ entryArray: [...old, entry] })
-  //     this.setState({ textInputValue: '' })
-  //     Database.addContent(entry)
-  //   }
-  // }
+  onBlurTextEntryInput = () => {
+    this.setState({inputMode: ''})
+  }
+
+  onBlurGifSearchInput = () => {
+    this.setState({inputMode: ''}) 
+    this.setState({gifSearchValue: ''})
+  }
 
   deleteEntry(id) {
     Vibration.cancel()
     Vibration.vibrate()
+
+    // TODO is this part necessary anymore?
     const newArray = this.state.entryArray.filter(entry => {
       return entry.id !== id
     })
     
-    // this.setState({entryArray: newArray})
-
     Database.deleteEntry(config.user, id)
     .then(res => {
       this.getEntries()
     })
   }
 
-  updateTextInputValue(text) {
-    this.setState({textInputValue: text})
+  updateTextEntryValue(text) {
+    this.setState({textEntryValue: text})
+  }
+
+  updateGifSearchValue(text) {
+    this.setState({gifSearchValue: text})
   }
 
   scrollToEnd() {
@@ -141,13 +146,18 @@ export default class MainScreen extends React.Component {
         />
 
         <Footer
+          inputMode={this.state.inputMode}
+          updateInputMode={this.updateInputMode.bind(this)}
           navigation={this.props.navigation}
-          onChangeText={this.updateTextInputValue.bind(this)}
-          onSubmitText={this.onSubmitText.bind(this)}
-          value={this.state.textInputValue}
-          onSubmitText={this.onSubmitText.bind(this)}
-          onPressPicture={this.onPressPicture.bind(this)}
+          textEntryValue={this.state.textEntryValue}
+          gifSearchValue={this.state.gifSearchValue}
+          onChangeTextEntryValue={this.updateTextEntryValue.bind(this)}
+          onChangeGifSearchValue={this.updateGifSearchValue.bind(this)}
+          onSubmitTextEntry={this.onSubmitTextEntry.bind(this)}
           onSelectGif={this.onSelectGif.bind(this)}
+          onBlurTextEntryInput={this.onBlurTextEntryInput.bind(this)}
+          onBlurGifSearchInput={this.onBlurGifSearchInput.bind(this)}
+          onPressPicture={this.onPressPicture.bind(this)}
         />
       </View>
     );

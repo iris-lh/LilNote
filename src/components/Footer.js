@@ -13,36 +13,28 @@ import GifScroller from './GifScroller'
 import config from '../config'
 
 export default class Footer extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      inputMode: '',
-      gifSearch: ''
-    }
-  }
-
   renderInput = () => {
-    if (this.state.inputMode === 'text') {
+    if (this.props.inputMode === 'text') {
       return (
         <TextInput 
           autoFocus={true}
           blurOnSubmit={true}
-          onBlur={()=>{this.setState({inputMode: ''})}}
+          onBlur={this.props.onBlurTextEntryInput} // TODO extract to parent
           keyBoardAppearance={'dark'}
-          onChangeText={this.props.onChangeText}
-          onSubmitEditing={this.props.onSubmitText}
-          value={this.props.value}
+          onChangeText={this.props.onChangeTextEntryValue}
+          onSubmitEditing={this.props.onSubmitTextEntry}
+          value={this.props.textEntryValue}
           placeholder='New Note'
           placeholderTextColor={config.colors.grayedOut}
           underlineColorAndroid='transparent'
           style={styles.textInput}>
         </TextInput>
       )
-    } else if (this.state.inputMode === 'gif') {
+    } else if (this.props.inputMode === 'gif') {
       return (
         <View>
           <GifScroller
-            inputText={this.state.gifSearch}
+            inputText={this.props.gifSearchValue}
             handleGifSelect={this.onSelectGif}
             style={{}}/>
           <TextInput
@@ -50,13 +42,10 @@ export default class Footer extends React.Component {
             autoFocus={true}
             blurOnSubmit={true}
             returnKeyType='done'
-            onBlur={()=>{
-              this.setState({inputMode: ''})
-              this.setState({gifSearch: ''})
-            }}
+            onBlur={this.props.onBlurGifSearchInput}
             keyBoardAppearance={'dark'}
-            onChangeText={this.onChangeGifSearch}
-            value={this.state.gifSearch}
+            onChangeText={this.props.onChangeGifSearchValue}
+            value={this.props.gifSearchValue}
             placeholder='Search Gifs'
             placeholderTextColor={config.colors.grayedOut}
             underlineColorAndroid='transparent'
@@ -69,10 +58,6 @@ export default class Footer extends React.Component {
     }
   }
 
-  onChangeGifSearch = (value) => {
-    this.setState({gifSearch: value})
-    this.forceUpdate()
-  }
 
   onSelectGif = (gif) => {
     this.props.onSelectGif(gif)
@@ -80,11 +65,11 @@ export default class Footer extends React.Component {
   }
 
   onPressText = () => {
-    this.setState({inputMode: 'text'})
+    this.props.updateInputMode('text')
   }
 
   onPressGif = () => {
-    this.setState({inputMode: 'gif'})
+    this.props.updateInputMode('gif')
   }
 
   renderButtons = () => {
@@ -117,7 +102,6 @@ export default class Footer extends React.Component {
   render() {
     return (
       <KeyboardAvoidingView style={styles.footer} behavior="padding">
-        
         {this.renderInput()}
       </KeyboardAvoidingView>
     )
