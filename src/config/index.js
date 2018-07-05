@@ -13,6 +13,9 @@ const _colors = {
 
 export default {
   user: 'Isaac',
+  giphy: {
+    apiKey: 'CWT9HXykv90uJUan8LW1gini2XLzLLuH'
+  },
   firebase: {
     databaseURL: 'https://lilnote-965c1.firebaseio.com',
     apiKey: 'AIzaSyAGBhj-Mwu_qV4AK_zTTXSfCsQtzZfop50',
