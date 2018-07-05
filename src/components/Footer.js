@@ -14,17 +14,17 @@ export default class Footer extends React.Component {
   constructor() {
     super()
     this.state = {
-      shouldShowTextInput: false
+      inputMode: ''
     }
   }
 
-  renderTextInput = () => {
-    if (this.state.shouldShowTextInput) {
+  renderInput = () => {
+    if (this.state.inputMode === 'text') {
       return (
         <TextInput 
           autoFocus={true}
           blurOnSubmit={true}
-          onBlur={()=>{this.setState({shouldShowTextInput: false})}}
+          onBlur={()=>{this.setState({inputMode: ''})}}
           keyBoardAppearance={'dark'}
           onChangeText={this.props.onChangeText}
           onSubmitEditing={this.props.onSubmitText}
@@ -35,11 +35,20 @@ export default class Footer extends React.Component {
           style={styles.textInput}>
         </TextInput>
       )
+    } else if (this.state.inputMode === 'gif') {
+      return (
+        <View>
+        </View>
+      )
     }
   }
 
   onPressText = () => {
-    this.setState({shouldShowTextInput: true})
+    this.setState({inputMode: 'text'})
+  }
+
+  onPressGif = () => {
+    this.setState({inputMode: 'gif'})
   }
 
   render() {
@@ -64,11 +73,11 @@ export default class Footer extends React.Component {
           </TouchableOpacity>
 
           {/* Embed a gif */}
-          <TouchableOpacity style={styles.addContentButton} onPress={this.props.onPressGif}>
+          <TouchableOpacity style={styles.addContentButton} onPress={this.onPressGif}>
             <Image style={styles.addContentIcon} source={config.icons.gif}/>
           </TouchableOpacity>
         </View>
-        {this.renderTextInput()}
+        {this.renderInput()}
       </KeyboardAvoidingView>
     )
   }

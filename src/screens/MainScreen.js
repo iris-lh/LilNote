@@ -38,11 +38,6 @@ export default class MainScreen extends React.Component {
       this.setState({entryArray: entries})
       this.forceUpdate()
     })
-    // .then(res => {
-    //   setTimeout(()=>{
-    //     this.scrollToEnd()
-    //   }, 100)
-    // })
   }
 
   async onSubmitText() {
